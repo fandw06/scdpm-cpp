@@ -22,13 +22,14 @@
 
 #include "rwip_config.h"             // SW configuration
 #include "user_main.h"
-#include "user_custs1_impl.h"
 #include "arch_api.h"
 #include "user_custs1_def.h"
 #include "gap.h"
 #include "spi_adxl.h"
 #include "rf_580.h"
 #include "adc.h"
+#include "i2c_light_sensor.h"
+#include "pwm.h"
 
 extern uint8_t read_DEVID_AD(void);
 extern uint8_t read_DEVID_MST(void);
@@ -36,6 +37,10 @@ extern uint8_t read_PARTID(void);
 extern uint8_t read_REVID(void);
 extern uint8_t read_accel(uint8_t channel_address);
 extern void adxl_init(uint8_t odr);
+extern void light_sensor_init(void);
+//extern uint16_t get_lux_bytes();
+
+
 void user_adc_init(void);
 /*
  * TYPE DEFINITIONS
@@ -134,15 +139,23 @@ void user_app_init(void)
     
     // Initialize Manufacturer Specific Data
     mnf_data_init();
-
     default_app_on_init();
 	
 	  // Initialize SPI adxl
 	  adxl_init(ODR_25HZ);
 	
+		// Initialize I2C MAX44009.
+		//light_sensor_init();
+	
 		// enable near field mode.
 		rf_nfm_enable();
 	//  rf_nfm_disable();
+	
+	SetWord16(CLK_AMBA_REG, 0x00);                 // set clocks (hclk and pclk ) 16MHz
+    SetWord16(SET_FREEZE_REG,FRZ_WDOG);            // stop watch dog
+    SetBits16(SYS_CTRL_REG,PAD_LATCH_EN,1);        // open pads
+    SetBits16(SYS_CTRL_REG,DEBUGGER_ENABLE,1);     // open debugger
+    SetBits16(PMU_CTRL_REG, PERIPH_SLEEP,0);       // exit peripheral power down
 }
 
 /**

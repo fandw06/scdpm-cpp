@@ -1,4 +1,4 @@
-;#<FEEDBACK># ARM Linker, 5060422: Last Updated: Wed May 10 13:58:41 2017
+;#<FEEDBACK># ARM Linker, 5060528: Last Updated: Tue May 01 10:40:49 2018
 ;VERSION 0.2
 ;FILE adc.o
 adc_calibrate <= USED 0
@@ -114,15 +114,11 @@ GPIO_GetPinStatus <= USED 0
 GPIO_RegisterCallback <= USED 0
 GPIO_SetIRQInputLevel <= USED 0
 ;FILE hardfault_handler.o
-;FILE i2c_eeprom.o
-i2c_eeprom_init <= USED 0
-i2c_eeprom_read_byte <= USED 0
-i2c_eeprom_read_data <= USED 0
-i2c_eeprom_release <= USED 0
-i2c_eeprom_write_byte <= USED 0
-i2c_eeprom_write_data <= USED 0
-i2c_eeprom_write_page <= USED 0
-i2c_wait_until_eeprom_ready <= USED 0
+;FILE i2c_light_sensor.o
+;FILE i2c_sensor.o
+i2c_sensor_release <= USED 0
+i2c_sensor_write_byte <= USED 0
+;FILE i2c_temp_sensor.o
 ;FILE jump_table.o
 dummyf <= USED 0
 ;FILE ke_mem.obj
@@ -136,6 +132,19 @@ log_ke_malloc <= USED 0
 ;FILE prf_utils.o
 prf_pack_date_time <= USED 0
 prf_unpack_date_time <= USED 0
+;FILE pwm.o
+timer0_disable_irq <= USED 0
+timer0_release <= USED 0
+timer0_set <= USED 0
+timer2_enable <= USED 0
+timer2_init <= USED 0
+timer2_set_hw_pause <= USED 0
+timer2_set_pwm2_duty_cycle <= USED 0
+timer2_set_pwm3_duty_cycle <= USED 0
+timer2_set_pwm4_duty_cycle <= USED 0
+timer2_set_pwm_frequency <= USED 0
+timer2_set_sw_pause <= USED 0
+timer2_stop <= USED 0
 ;FILE rf_580.o
 rf_nfm_disable <= USED 0
 rf_nfm_is_enabled <= USED 0

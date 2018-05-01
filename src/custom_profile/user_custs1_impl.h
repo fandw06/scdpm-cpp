@@ -18,7 +18,16 @@
 #ifndef _USER_CUSTS1_IMPL_H_
 #define _USER_CUSTS1_IMPL_H_
 
+/*
+ * INCLUDE FILES
+ ****************************************************************************************
+ */
 #include <stdint.h>
+#include "gapc_task.h"                 // gap functions and messages
+#include "gapm_task.h"                 // gap functions and messages
+#include "custs1_task.h"
+#include "datasheet.h"
+#include "user_config.h"
 
 /*
  * DEFINES
@@ -28,8 +37,10 @@
 enum
 {
     CUSTS1_DATA_DISABLE = 0,
-    CUSTS1_DATA_ENABLE,
+    CUSTS1_DATA_ENABLE_BLE,
+		CUSTS1_DATA_ENABLE_TIMER,
 };
+
 
 /**
  ****************************************************************************************
@@ -38,20 +49,10 @@ enum
 */
 struct user_data_buffer {
     const uint8_t SIZE;
-	  uint8_t data[20];
+	  uint8_t data[PACKET_LEN];
     uint8_t pos;
 };
 
-
-/*
- * INCLUDE FILES
- ****************************************************************************************
- */
-
-#include "gapc_task.h"                 // gap functions and messages
-#include "gapm_task.h"                 // gap functions and messages
-#include "custs1_task.h"
-#include "datasheet.h"
 /*
  * FUNCTION DECLARATIONS
  ****************************************************************************************
@@ -75,17 +76,35 @@ void user_custs1_ctrl_wr_ind_handler(ke_msg_id_t const msgid,
 																						
 /**
  ****************************************************************************************
- * @brief Base sampling timer callback handler.
+ * @brief Base sampling timer callback handlers.
+				Scheme0~N are for product, and others are for testing. 
  * @return void
  ****************************************************************************************
  */
-void app_base_val_timer_cb_handler(void);																					
-															
-uint8_t get_ecg(void);
-uint8_t get_vol(void);
-uint8_t* get_accel(void);
-static inline void ble_turn_radio_off(void);
-static inline void ble_turn_radio_on(void);
+void app_base_val_timer_cb_handler(void);			
+
+// Test schemes																			
+void app_base_timer_handler_test_empty(void);																			
+void app_base_timer_handler_test_basic(void);		
+																			
+// Product schemes
+// Full 51																			
+void app_base_timer_handler_scheme0(void);			
+// Full 41
+void app_base_timer_handler_scheme1(void);	
+// Environment tracker
+void app_base_timer_handler_scheme2(void);	
+// Motion tracker
+void app_base_timer_handler_scheme3(void);	
+// ECG tracker		
+void app_base_timer_handler_scheme4(void);
+
+uint8_t get_ecg(uint16_t *ecg);
+uint8_t get_vol(uint16_t *vol);
+uint8_t get_accel(uint8_t *accel);
+
+void app_param_update_func(uint16_t intv_min);
+void timer0_setup(void);
 /// @} APP
 
 #endif // _USER_CUSTS1_IMPL_H_

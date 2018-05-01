@@ -3,14 +3,8 @@
  *
  * @file i2c_eeprom.c
  *
- * @brief eeprom driver over i2c interface.
- *
- * Copyright (C) 2012. Dialog Semiconductor Ltd, unpublished work. This computer
- * program includes Confidential, Proprietary Information and is a Trade Secret of
- * Dialog Semiconductor Ltd.  All use, disclosure, and/or reproduction is prohibited
- * unless authorized in writing. All Rights Reserved.
- *
- * <bluetooth.support@diasemi.com> and contributors.
+ * @brief i2c sensor(light, temperature, etc) driver over i2c interface header file.
+ *        This is adapted from 'i2c_eeprom.c'. 
  *
  ****************************************************************************************
  */
@@ -23,7 +17,7 @@
 #include "global_io.h"
 #include "gpio.h"
 #include "user_periph_setup.h"
-#include "i2c_eeprom.h"
+#include "i2c_sensor.h"
 
 /*
  * DEFINES
@@ -53,7 +47,7 @@ static uint8_t i2c_dev_address;     // Device address
  ****************************************************************************************
  */
 
-void i2c_eeprom_init(uint16_t dev_address, uint8_t speed, uint8_t address_mode, uint8_t address_size)
+void i2c_sensor_init(uint16_t dev_address, uint8_t speed, uint8_t address_mode, uint8_t address_size)
 {
     mem_address_size = address_size;
     SetBits16(CLK_PER_REG, I2C_ENABLE, 1);                                        // enable  clock for I2C
@@ -67,13 +61,13 @@ void i2c_eeprom_init(uint16_t dev_address, uint8_t speed, uint8_t address_mode, 
     i2c_dev_address = dev_address;
 }
 
-void i2c_eeprom_release(void)
+void i2c_sensor_release(void)
 {
     SetWord16(I2C_ENABLE_REG, 0x0);                             // Disable the I2C controller
     SetBits16(CLK_PER_REG, I2C_ENABLE, 0);                      // Disable clock for I2C
 }
 
-i2c_error_code i2c_wait_until_eeprom_ready(void)
+i2c_error_code i2c_wait_until_device_ready(void)
 {
     uint16_t tx_abrt_source;
 
@@ -121,9 +115,9 @@ static void i2c_send_address(uint32_t address)
     SEND_I2C_COMMAND(address & 0xFF);                    // Set address LSB, write access
 }
 
-i2c_error_code i2c_eeprom_read_byte(uint32_t address, uint8_t *byte)
+i2c_error_code i2c_sensor_read_byte(uint32_t address, uint8_t *byte)
 {
-    if (i2c_wait_until_eeprom_ready() != I2C_NO_ERROR)
+    if (i2c_wait_until_device_ready() != I2C_NO_ERROR)
     {
         return I2C_7B_ADDR_NOACK_ERROR;
     }
@@ -184,53 +178,9 @@ static void read_data_single(uint8_t **p, uint32_t address, uint32_t size)
     WAIT_UNTIL_NO_MASTER_ACTIVITY();                // wait until no master activity 
 }
 
-i2c_error_code i2c_eeprom_read_data(uint8_t *rd_data_ptr, uint32_t address, uint32_t size, uint32_t *bytes_read)
+i2c_error_code i2c_sensor_write_byte(uint32_t address, uint8_t byte)
 {
-    uint32_t tmp_size;
-    
-    if (size == 0)
-    {
-        *bytes_read = 0;
-        return I2C_NO_ERROR;
-    }
-
-    // Check for max bytes to be read from a (MAX_SIZE x 8) I2C EEPROM
-    if (size > I2C_EEPROM_SIZE - address)
-    {
-        tmp_size = I2C_EEPROM_SIZE - address;
-        *bytes_read = tmp_size;
-    }
-    else
-    {
-        tmp_size = size;
-        *bytes_read = size;
-    }
-
-    if (i2c_wait_until_eeprom_ready() != I2C_NO_ERROR)
-    {
-        return I2C_7B_ADDR_NOACK_ERROR;
-    }
-
-    // Read 32 bytes at a time
-    while (tmp_size >= 32)
-    {
-        read_data_single(&rd_data_ptr, address, 32);
-
-        address += 32;                              // Update base address for read
-        tmp_size -= 32;                             // Update tmp_size for bytes remaining to be read
-    }
-
-    if (tmp_size)
-    {
-        read_data_single(&rd_data_ptr, address, tmp_size);
-    }
-
-    return I2C_NO_ERROR;
-}
-
-i2c_error_code i2c_eeprom_write_byte(uint32_t address, uint8_t byte)
-{
-    if (i2c_wait_until_eeprom_ready() != I2C_NO_ERROR)
+    if (i2c_wait_until_device_ready() != I2C_NO_ERROR)
     {
         return I2C_7B_ADDR_NOACK_ERROR;
     }
@@ -251,80 +201,56 @@ i2c_error_code i2c_eeprom_write_byte(uint32_t address, uint8_t byte)
     return I2C_NO_ERROR;
 }
 
-i2c_error_code i2c_eeprom_write_page(uint8_t *wr_data_ptr, uint32_t address, uint16_t size, uint32_t *bytes_written)
+i2c_error_code i2c_sensor_write_bytes(uint32_t address, uint8_t* byte, uint8_t len)
 {
-    uint16_t feasible_size;
-    *bytes_written = 0;
-
-    if (address < I2C_EEPROM_SIZE)
+    if (i2c_wait_until_device_ready() != I2C_NO_ERROR)
     {
-        // max possible write size without crossing page boundary
-        feasible_size = I2C_EEPROM_PAGE - (address % I2C_EEPROM_PAGE);
-
-        if (size < feasible_size)
-        {
-            feasible_size = size;                   // adjust limit accordingly
-        }
-
-        if (i2c_wait_until_eeprom_ready() != I2C_NO_ERROR)
-        {
-            return I2C_7B_ADDR_NOACK_ERROR;
-        }
-
-        // Critical section
-        GLOBAL_INT_DISABLE();
-
-        i2c_send_address(address);
-
-        do
-        {
-            WAIT_WHILE_I2C_FIFO_IS_FULL();          // Wait if I2C Tx FIFO is full
-            SEND_I2C_COMMAND(*wr_data_ptr & 0xFF);  // Send write data
-            wr_data_ptr++;
-            feasible_size--;
-            (*bytes_written)++;
-        }
-        while (feasible_size != 0);
-
-        // End of critical section
-        GLOBAL_INT_RESTORE();
-
-        WAIT_UNTIL_I2C_FIFO_IS_EMPTY();             // Wait until Tx FIFO is empty
-        WAIT_UNTIL_NO_MASTER_ACTIVITY();            // Wait until no master activity
+        return I2C_7B_ADDR_NOACK_ERROR;
     }
+
+    // Critical section
+    GLOBAL_INT_DISABLE();
+    
+		i2c_send_address(address);
+		for (int i = 0; i< len; i++) {
+			uint8_t d = *(byte + i);
+			SEND_I2C_COMMAND(d & 0xFF);                  // Send write byte
+			WAIT_UNTIL_I2C_FIFO_IS_EMPTY();                 // Wait until Tx FIFO is empty
+    }
+    // End of critical section
+    GLOBAL_INT_RESTORE();
+    
+    WAIT_UNTIL_I2C_FIFO_IS_EMPTY();                 // Wait until Tx FIFO is empty
+    WAIT_UNTIL_NO_MASTER_ACTIVITY();                // Wait until no master activity
 
     return I2C_NO_ERROR;
 }
 
-i2c_error_code i2c_eeprom_write_data(uint8_t *wr_data_ptr, uint32_t address, uint32_t size, uint32_t *bytes_written)
+i2c_error_code i2c_sensor_read_bytes(uint32_t address, uint8_t *byte, uint8_t len)
 {
-    *bytes_written = 0;
-    uint32_t feasible_size = size;
-    uint32_t bytes_left_to_send;
-    uint32_t cnt = 0;
-
-    if (address >= I2C_EEPROM_SIZE)
+		if (i2c_wait_until_device_ready() != I2C_NO_ERROR)
     {
-        return I2C_INVALID_EEPROM_ADDRESS;          // address is not it the EEPROM address space
+        return I2C_7B_ADDR_NOACK_ERROR;
     }
+    // Critical section
+    GLOBAL_INT_DISABLE();
 
-    // limit to the maximum count of bytes that can be written to an (I2C_EEPROM_SIZE x 8) EEPROM
-    if (size > I2C_EEPROM_SIZE - address)
+    i2c_send_address(address);
+
+    for (uint8_t j = 0; j < len; j++)
     {
-        feasible_size = I2C_EEPROM_SIZE - address;
+        WAIT_WHILE_I2C_FIFO_IS_FULL();              // Wait if Tx FIFO is full
+        SEND_I2C_COMMAND(0x0100);                   // Set read access for <size> times
     }
-
-    bytes_left_to_send = feasible_size;
-
-    while (bytes_left_to_send)
-    {
-        if (i2c_eeprom_write_page(wr_data_ptr + (*bytes_written), address + (*bytes_written), bytes_left_to_send, &cnt) != I2C_NO_ERROR)
-        {
-            return I2C_7B_ADDR_NOACK_ERROR;
-        }
-        (*bytes_written) += cnt;
-        bytes_left_to_send -= cnt;
-    }
+    
+    // End of critical section
+    GLOBAL_INT_RESTORE();
+    for (uint8_t i = 0; i<len; i++) {
+			WAIT_FOR_RECEIVED_BYTE();                       // Wait for received data
+			*(byte + i) = (0xFF & GetWord16(I2C_DATA_CMD_REG));     // Get received byte
+		}
+		WAIT_UNTIL_I2C_FIFO_IS_EMPTY();                 // Wait until Tx FIFO is empty
+    WAIT_UNTIL_NO_MASTER_ACTIVITY();                // wait until no master activity 
 
     return I2C_NO_ERROR;
 }

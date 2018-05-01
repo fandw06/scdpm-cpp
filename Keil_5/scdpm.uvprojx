@@ -10,7 +10,7 @@
       <TargetName>scdpm</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
+      <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -336,7 +336,7 @@
               <MiscControls>--c99 --thumb -c --preinclude da1458x_config_basic.h --preinclude da1458x_config_advanced.h --preinclude user_config.h --bss_threshold=0 --feedback=".\unused.txt"</MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\src\sdk\platform\include;C:\Keil\ARM\RV31\INC;c:\Keil\ARM\CMSIS\Include;..\src\sdk\app_modules\api;..\src\sdk\app_modules\src\app_bass;..\src\sdk\app_modules\src\app_custs;..\src\sdk\app_modules\src\app_diss;..\src\sdk\app_modules\src\app_findme;..\src\sdk\app_modules\src\app_multi_bond;..\src\sdk\app_modules\src\app_proxr;..\src\sdk\app_modules\src\app_spotar;..\src\sdk\ble_stack\controller\em;..\src\sdk\ble_stack\controller\llc;..\src\sdk\ble_stack\controller\lld;..\src\sdk\ble_stack\controller\llm;..\src\sdk\ble_stack\hcic;..\src\sdk\ble_stack\hcih;..\src\sdk\ble_stack\host\att;..\src\sdk\ble_stack\host\att\attc;..\src\sdk\ble_stack\host\att\attm;..\src\sdk\ble_stack\host\att\atts;..\src\sdk\ble_stack\host\gap;..\src\sdk\ble_stack\host\gap\gapc;..\src\sdk\ble_stack\host\gap\gapm;..\src\sdk\ble_stack\host\gatt;..\src\sdk\ble_stack\host\gatt\gattc;..\src\sdk\ble_stack\host\gatt\gattm;..\src\sdk\ble_stack\host\l2c\l2cc;..\src\sdk\ble_stack\host\l2c\l2cm;..\src\sdk\ble_stack\host\smp\smpc;..\src\sdk\ble_stack\host\smp\smpm;..\src\sdk\ble_stack\host\smp;..\src\sdk\ble_stack\profiles\accel;..\src\sdk\ble_stack\profiles\adc_notify;..\src\sdk\ble_stack\profiles\anc\ancc;..\src\sdk\ble_stack\profiles\anc;..\src\sdk\ble_stack\profiles\anp\anpc;..\src\sdk\ble_stack\profiles\anp\anps;..\src\sdk\ble_stack\profiles\anp;..\src\sdk\ble_stack\profiles\bas\basc;..\src\sdk\ble_stack\profiles\bas\bass;..\src\sdk\ble_stack\profiles\blp\blpc;..\src\sdk\ble_stack\profiles\blp\blps;..\src\sdk\ble_stack\profiles\blp;..\src\sdk\ble_stack\profiles\cpp\cppc;..\src\sdk\ble_stack\profiles\cpp\cpps;..\src\sdk\ble_stack\profiles\cpp;..\src\sdk\ble_stack\profiles\cscp\cscpc;..\src\sdk\ble_stack\profiles\cscp\cscps;..\src\sdk\ble_stack\profiles\cscp;..\src\sdk\ble_stack\profiles\custom;..\src\sdk\ble_stack\profiles\custom\custs;..\src\sdk\ble_stack\profiles\device_config;..\src\sdk\ble_stack\profiles\dis\disc;..\src\sdk\ble_stack\profiles\dis\diss;..\src\sdk\ble_stack\profiles\find\findl;..\src\sdk\ble_stack\profiles\find\findt;..\src\sdk\ble_stack\profiles\glp\glpc;..\src\sdk\ble_stack\profiles\glp\glps;..\src\sdk\ble_stack\profiles\glp;..\src\sdk\ble_stack\profiles\hogp\hogpbh;..\src\sdk\ble_stack\profiles\hogp\hogpd;..\src\sdk\ble_stack\profiles\hogp\hogprh;..\src\sdk\ble_stack\profiles\hogp;..\src\sdk\ble_stack\profiles\hrp\hrpc;..\src\sdk\ble_stack\profiles\hrp\hrps;..\src\sdk\ble_stack\profiles\hrp;..\src\sdk\ble_stack\profiles\htp\htpc;..\src\sdk\ble_stack\profiles\htp\htpt;..\src\sdk\ble_stack\profiles\htp;..\src\sdk\ble_stack\profiles\ieu;..\src\sdk\ble_stack\profiles\lan\lanc;..\src\sdk\ble_stack\profiles\lan\lans;..\src\sdk\ble_stack\profiles\lan;..\src\sdk\ble_stack\profiles\mpu;..\src\sdk\ble_stack\profiles\pasp\paspc;..\src\sdk\ble_stack\profiles\pasp\pasps;..\src\sdk\ble_stack\profiles\pasp;..\src\sdk\ble_stack\profiles;..\src\sdk\ble_stack\profiles\prox\proxm;..\src\sdk\ble_stack\profiles\prox\proxr;..\src\sdk\ble_stack\profiles\rscp\rscpc;..\src\sdk\ble_stack\profiles\rscp\rscps;..\src\sdk\ble_stack\profiles\rscp;..\src\sdk\ble_stack\profiles\sample128;..\src\sdk\ble_stack\profiles\scpp\scppc;..\src\sdk\ble_stack\profiles\scpp\scpps;..\src\sdk\ble_stack\profiles\scpp;..\src\sdk\ble_stack\profiles\spota\spotar;..\src\sdk\ble_stack\profiles\sps\sps_client;..\src\sdk\ble_stack\profiles\sps\sps_server;..\src\sdk\ble_stack\profiles\streamdata\streamdatad;..\src\sdk\ble_stack\profiles\streamdata\streamdatah;..\src\sdk\ble_stack\profiles\tip\tipc;..\src\sdk\ble_stack\profiles\tip\tips;..\src\sdk\ble_stack\profiles\tip;..\src\sdk\ble_stack\profiles\uds\udss;..\src\sdk\ble_stack\profiles\uds;..\src\sdk\ble_stack\profiles\wpt\wptc;..\src\sdk\ble_stack\profiles\wpt\wpts;..\src\sdk\ble_stack\profiles\wpt;..\src\sdk\ble_stack\profiles\wss\wsss;..\src\sdk\ble_stack\rwble;..\src\sdk\ble_stack\rwble_hl;.\..\src\sdk\common_project_files;..\src\sdk\platform\arch;..\src\sdk\platform\arch\boot\rvds;..\src\sdk\platform\arch\compiler\rvds;..\src\sdk\platform\arch\ll\rvds;..\src\sdk\platform\arch\main;..\src\sdk\platform\arch;..\src\sdk\platform\core_modules\arch_console;..\src\sdk\platform\core_modules\common\api;..\src\sdk\platform\core_modules\crypto;..\src\sdk\platform\core_modules\dbg\api;..\src\sdk\platform\core_modules\gtl\src;..\src\sdk\platform\core_modules\ke\api;..\src\sdk\platform\core_modules\ke\src;..\src\sdk\platform\core_modules\nvds\api;..\src\sdk\platform\core_modules\rf\api;..\src\sdk\platform\core_modules\rwip\api;..\src\sdk\platform\core_modules\wlan_coex;..\src\sdk\platform\driver\accel;..\src\sdk\platform\driver\adc;..\src\sdk\platform\driver\battery;..\src\sdk\platform\driver\bme280;..\src\sdk\platform\driver\coex;..\src\sdk\platform\driver\coex;..\src\sdk\platform\driver\emi;..\src\sdk\platform\driver\gpio;..\src\sdk\platform\driver\i2c_BMI055;..\src\sdk\platform\driver\i2c_core;..\src\sdk\platform\driver\i2c_eeprom;..\src\sdk\platform\driver\intc;..\src\sdk\platform\driver\inv;..\src\sdk\platform\driver\led;..\src\sdk\platform\driver\mc3410;..\src\sdk\platform\driver\pwm;..\src\sdk\platform\driver\rc5;..\src\sdk\platform\driver\reg;..\src\sdk\platform\driver\sensor;..\src\sdk\platform\driver\spi;..\src\sdk\platform\driver\spi_439;..\src\sdk\platform\driver\spi_flash;..\src\sdk\platform\driver\spi_hci;..\src\sdk\platform\driver\syscntl;..\src\sdk\platform\driver\systick;..\src\sdk\platform\driver\trng;..\src\sdk\platform\driver\uart;..\src\sdk\platform\driver\wkupct_quadec;.\..\src\config;.\..\src;..\src\sdk\platform\core_modules\gtl\api;..\src\custom_profile;..\src\platform;..\src\user_driver\spi_adxl</IncludePath>
+              <IncludePath>..\src\sdk\platform\include;C:\Keil\ARM\RV31\INC;c:\Keil\ARM\CMSIS\Include;..\src\sdk\app_modules\api;..\src\sdk\app_modules\src\app_bass;..\src\sdk\app_modules\src\app_custs;..\src\sdk\app_modules\src\app_diss;..\src\sdk\app_modules\src\app_findme;..\src\sdk\app_modules\src\app_multi_bond;..\src\sdk\app_modules\src\app_proxr;..\src\sdk\app_modules\src\app_spotar;..\src\sdk\ble_stack\controller\em;..\src\sdk\ble_stack\controller\llc;..\src\sdk\ble_stack\controller\lld;..\src\sdk\ble_stack\controller\llm;..\src\sdk\ble_stack\hcic;..\src\sdk\ble_stack\hcih;..\src\sdk\ble_stack\host\att;..\src\sdk\ble_stack\host\att\attc;..\src\sdk\ble_stack\host\att\attm;..\src\sdk\ble_stack\host\att\atts;..\src\sdk\ble_stack\host\gap;..\src\sdk\ble_stack\host\gap\gapc;..\src\sdk\ble_stack\host\gap\gapm;..\src\sdk\ble_stack\host\gatt;..\src\sdk\ble_stack\host\gatt\gattc;..\src\sdk\ble_stack\host\gatt\gattm;..\src\sdk\ble_stack\host\l2c\l2cc;..\src\sdk\ble_stack\host\l2c\l2cm;..\src\sdk\ble_stack\host\smp\smpc;..\src\sdk\ble_stack\host\smp\smpm;..\src\sdk\ble_stack\host\smp;..\src\sdk\ble_stack\profiles\accel;..\src\sdk\ble_stack\profiles\adc_notify;..\src\sdk\ble_stack\profiles\anc\ancc;..\src\sdk\ble_stack\profiles\anc;..\src\sdk\ble_stack\profiles\anp\anpc;..\src\sdk\ble_stack\profiles\anp\anps;..\src\sdk\ble_stack\profiles\anp;..\src\sdk\ble_stack\profiles\bas\basc;..\src\sdk\ble_stack\profiles\bas\bass;..\src\sdk\ble_stack\profiles\blp\blpc;..\src\sdk\ble_stack\profiles\blp\blps;..\src\sdk\ble_stack\profiles\blp;..\src\sdk\ble_stack\profiles\cpp\cppc;..\src\sdk\ble_stack\profiles\cpp\cpps;..\src\sdk\ble_stack\profiles\cpp;..\src\sdk\ble_stack\profiles\cscp\cscpc;..\src\sdk\ble_stack\profiles\cscp\cscps;..\src\sdk\ble_stack\profiles\cscp;..\src\sdk\ble_stack\profiles\custom;..\src\sdk\ble_stack\profiles\custom\custs;..\src\sdk\ble_stack\profiles\device_config;..\src\sdk\ble_stack\profiles\dis\disc;..\src\sdk\ble_stack\profiles\dis\diss;..\src\sdk\ble_stack\profiles\find\findl;..\src\sdk\ble_stack\profiles\find\findt;..\src\sdk\ble_stack\profiles\glp\glpc;..\src\sdk\ble_stack\profiles\glp\glps;..\src\sdk\ble_stack\profiles\glp;..\src\sdk\ble_stack\profiles\hogp\hogpbh;..\src\sdk\ble_stack\profiles\hogp\hogpd;..\src\sdk\ble_stack\profiles\hogp\hogprh;..\src\sdk\ble_stack\profiles\hogp;..\src\sdk\ble_stack\profiles\hrp\hrpc;..\src\sdk\ble_stack\profiles\hrp\hrps;..\src\sdk\ble_stack\profiles\hrp;..\src\sdk\ble_stack\profiles\htp\htpc;..\src\sdk\ble_stack\profiles\htp\htpt;..\src\sdk\ble_stack\profiles\htp;..\src\sdk\ble_stack\profiles\ieu;..\src\sdk\ble_stack\profiles\lan\lanc;..\src\sdk\ble_stack\profiles\lan\lans;..\src\sdk\ble_stack\profiles\lan;..\src\sdk\ble_stack\profiles\mpu;..\src\sdk\ble_stack\profiles\pasp\paspc;..\src\sdk\ble_stack\profiles\pasp\pasps;..\src\sdk\ble_stack\profiles\pasp;..\src\sdk\ble_stack\profiles;..\src\sdk\ble_stack\profiles\prox\proxm;..\src\sdk\ble_stack\profiles\prox\proxr;..\src\sdk\ble_stack\profiles\rscp\rscpc;..\src\sdk\ble_stack\profiles\rscp\rscps;..\src\sdk\ble_stack\profiles\rscp;..\src\sdk\ble_stack\profiles\sample128;..\src\sdk\ble_stack\profiles\scpp\scppc;..\src\sdk\ble_stack\profiles\scpp\scpps;..\src\sdk\ble_stack\profiles\scpp;..\src\sdk\ble_stack\profiles\spota\spotar;..\src\sdk\ble_stack\profiles\sps\sps_client;..\src\sdk\ble_stack\profiles\sps\sps_server;..\src\sdk\ble_stack\profiles\streamdata\streamdatad;..\src\sdk\ble_stack\profiles\streamdata\streamdatah;..\src\sdk\ble_stack\profiles\tip\tipc;..\src\sdk\ble_stack\profiles\tip\tips;..\src\sdk\ble_stack\profiles\tip;..\src\sdk\ble_stack\profiles\uds\udss;..\src\sdk\ble_stack\profiles\uds;..\src\sdk\ble_stack\profiles\wpt\wptc;..\src\sdk\ble_stack\profiles\wpt\wpts;..\src\sdk\ble_stack\profiles\wpt;..\src\sdk\ble_stack\profiles\wss\wsss;..\src\sdk\ble_stack\rwble;..\src\sdk\ble_stack\rwble_hl;.\..\src\sdk\common_project_files;..\src\sdk\platform\arch;..\src\sdk\platform\arch\boot\rvds;..\src\sdk\platform\arch\compiler\rvds;..\src\sdk\platform\arch\ll\rvds;..\src\sdk\platform\arch\main;..\src\sdk\platform\arch;..\src\sdk\platform\core_modules\arch_console;..\src\sdk\platform\core_modules\common\api;..\src\sdk\platform\core_modules\crypto;..\src\sdk\platform\core_modules\dbg\api;..\src\sdk\platform\core_modules\gtl\src;..\src\sdk\platform\core_modules\ke\api;..\src\sdk\platform\core_modules\ke\src;..\src\sdk\platform\core_modules\nvds\api;..\src\sdk\platform\core_modules\rf\api;..\src\sdk\platform\core_modules\rwip\api;..\src\sdk\platform\core_modules\wlan_coex;..\src\sdk\platform\driver\accel;..\src\sdk\platform\driver\adc;..\src\sdk\platform\driver\battery;..\src\sdk\platform\driver\bme280;..\src\sdk\platform\driver\coex;..\src\sdk\platform\driver\coex;..\src\sdk\platform\driver\emi;..\src\sdk\platform\driver\gpio;..\src\sdk\platform\driver\i2c_BMI055;..\src\sdk\platform\driver\i2c_core;..\src\sdk\platform\driver\i2c_eeprom;..\src\sdk\platform\driver\intc;..\src\sdk\platform\driver\inv;..\src\sdk\platform\driver\led;..\src\sdk\platform\driver\mc3410;..\src\sdk\platform\driver\pwm;..\src\sdk\platform\driver\rc5;..\src\sdk\platform\driver\reg;..\src\sdk\platform\driver\sensor;..\src\sdk\platform\driver\spi;..\src\sdk\platform\driver\spi_439;..\src\sdk\platform\driver\spi_flash;..\src\sdk\platform\driver\spi_hci;..\src\sdk\platform\driver\syscntl;..\src\sdk\platform\driver\systick;..\src\sdk\platform\driver\trng;..\src\sdk\platform\driver\uart;..\src\sdk\platform\driver\wkupct_quadec;.\..\src\config;.\..\src;..\src\sdk\platform\core_modules\gtl\api;..\src\custom_profile;..\src\platform;..\src\user_driver\spi_adxl;..\src\user_driver\i2c</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -659,11 +659,6 @@
               <FilePath>..\src\sdk\platform\driver\spi\spi.c</FilePath>
             </File>
             <File>
-              <FileName>i2c_eeprom.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\src\sdk\platform\driver\i2c_eeprom\i2c_eeprom.c</FilePath>
-            </File>
-            <File>
               <FileName>uart2.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\sdk\platform\driver\uart\uart2.c</FilePath>
@@ -879,11 +874,6 @@
               <FilePath>..\src\sdk\platform\driver\i2c_core\i2c_core.h</FilePath>
             </File>
             <File>
-              <FileName>i2c_eeprom.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\src\sdk\platform\driver\i2c_eeprom\i2c_eeprom.h</FilePath>
-            </File>
-            <File>
               <FileName>pwm.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\src\sdk\platform\driver\pwm\pwm.h</FilePath>
@@ -917,6 +907,11 @@
               <FileName>wkupct_quadec.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\src\sdk\platform\driver\wkupct_quadec\wkupct_quadec.h</FilePath>
+            </File>
+            <File>
+              <FileName>pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\sdk\platform\driver\pwm\pwm.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1092,6 +1087,26 @@
               <FileName>spi_adxl.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\user_driver\spi_adxl\spi_adxl.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c_light_sensor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\user_driver\i2c\i2c_light_sensor.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c_sensor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\user_driver\i2c\i2c_sensor.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c_temp_sensor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\user_driver\i2c\i2c_temp_sensor.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c_temp_sensor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\src\user_driver\i2c\i2c_temp_sensor.h</FilePath>
             </File>
           </Files>
         </Group>

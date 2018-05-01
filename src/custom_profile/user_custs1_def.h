@@ -18,6 +18,7 @@
 #ifndef _USER_CUSTS1_DEF_H_
 #define _USER_CUSTS1_DEF_H_
 
+#include "user_config.h" 
 /**
  ****************************************************************************************
  * @defgroup USER_CONFIG
@@ -39,8 +40,8 @@
 #define DEF_CUST1_CTRL_POINT_UUID_128      {0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}
 #define DEF_CUST1_SENSOR_VAL_UUID_128      {0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}
 
-#define DEF_CUST1_CTRL_POINT_CHAR_LEN      1
-#define DEF_CUST1_SENSOR_VAL_CHAR_LEN      20
+#define DEF_CUST1_CTRL_POINT_CHAR_LEN      4
+#define DEF_CUST1_SENSOR_VAL_CHAR_LEN      PACKET_LEN
 
 #define CUST1_CONTROL_POINT_USER_DESC      "Control"
 #define CUST1_SENSOR_VAL_USER_DESC         "Sensor"

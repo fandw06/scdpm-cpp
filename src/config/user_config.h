@@ -28,12 +28,15 @@
 #include "app_default_handlers.h"
 #include "app_adv_data.h"
 
+
+#define PACKET_LEN      20
+
 /*
  * VARIABLES
  ****************************************************************************************
  */
- const static int conn_min = 160;
- const static int conn_max = 200;
+ const static int conn_min = 200;
+ const static int conn_max = 280;
  const static int conn_timeout = 8100;
 
 /******************************************
@@ -46,7 +49,7 @@
  ******************************************
  */
 const static sleep_state_t app_default_sleep_mode = ARCH_EXT_SLEEP_ON;
-
+//const static sleep_state_t app_default_sleep_mode = ARCH_SLEEP_OFF;
 /*
  ****************************************************************************************
  *
@@ -142,7 +145,7 @@ static const struct advertise_configuration user_adv_conf = {
 #define USER_ADVERTISE_SCAN_RESPONSE_DATA_LEN (sizeof(USER_ADVERTISE_SCAN_RESPONSE_DATA)-1)
 
 /// Device name to be placed in advertising or scan response data
-#define USER_DEVICE_NAME    ("ASSIST Solar")
+#define USER_DEVICE_NAME    ("scdpm")
 
 /// Device name length
 #define USER_DEVICE_NAME_LEN (sizeof(USER_DEVICE_NAME)-1)
@@ -175,7 +178,7 @@ static const struct gapm_configuration user_gapm_conf = {
     .name_write_perm = GAPM_WRITE_DISABLE,
 
     /// Maximal MTU
-    .max_mtu = 23,
+    .max_mtu = PACKET_LEN + 3,
 
     /// Peripheral only: *****************************************************************
     /// Slave preferred Minimum of connection interval  measured in ble double slots (1.25ms)

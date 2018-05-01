@@ -27,7 +27,6 @@
 #include "global_io.h"
 #include "arch.h"
 #include "da1458x_periph_setup.h"
-#include "i2c_eeprom.h"
 
 /*
  * DEFINES
@@ -89,6 +88,7 @@
 		#define SPI_EN_GPIO_PORT    GPIO_PORT_1
 		#define SPI_DI_GPIO_PORT    GPIO_PORT_1
 		#define SPI_DO_GPIO_PORT    GPIO_PORT_1
+		
     #define SPI_CLK_GPIO_PIN    GPIO_PIN_0
     #define SPI_EN_GPIO_PIN     GPIO_PIN_1
     #define SPI_DI_GPIO_PIN     GPIO_PIN_2
@@ -99,7 +99,13 @@
     #define SPI_CS_PIN     GPIO_PIN_1
     #define SPI_DI_PIN     GPIO_PIN_2
 		#define SPI_DO_PIN     GPIO_PIN_3
-		/**/
+		
+		
+		/* I2C settings using GPIO PORT*/
+		#define I2C_GPIO_PORT  GPIO_PORT_0
+		#define I2C_SCL_PIN    GPIO_PIN_7
+		#define I2C_SDA_PIN    GPIO_PIN_5
+		
 		
 #else // DA14583
     #define SPI_EN_GPIO_PORT    GPIO_PORT_2

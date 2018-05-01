@@ -392,12 +392,12 @@ void app_easy_timer_cancel(const timer_hnd timer_id)
         }
         else
         {
-            ASSERT_WARNING(0);
+            //ASSERT_WARNING(0);
         }
    }
    else
    {
-       ASSERT_WARNING(0);
+       //ASSERT_WARNING(0);
    }
 }
 

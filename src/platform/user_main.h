@@ -8,8 +8,8 @@
  ****************************************************************************************
  */
 
-#ifndef _USER_PERIPHERAL_H_
-#define _USER_PERIPHERAL_H_
+#ifndef _USER_MAIN_H_
+#define _USER_MAIN_H_
 
 /**
  ****************************************************************************************
@@ -38,6 +38,7 @@
 
 #include "app_callback.h"
 #include "app_default_handlers.h"
+#include "user_custs1_impl.h"
 
 
 /*
@@ -56,10 +57,7 @@
 #define APP_AD_MSD_COMPANY_ID_LEN   (2)
 #define APP_AD_MSD_DATA_LEN         (sizeof(uint16_t))
 
-//unit is 10ms
-//Sampling frequency of three sensors
-#define BASE_INTERVAL 4
-/*
+/* 
  * TYPE DEFINITIONS
  ****************************************************************************************
  */
@@ -131,4 +129,4 @@ void user_catch_rest_hndl(ke_msg_id_t const msgid,
 
 /// @} APP
 
-#endif // _USER_PERIPHERAL_H_
+#endif // _USER_MAIN_H_
