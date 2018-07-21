@@ -38,7 +38,6 @@ enum
 {
     CUSTS1_DATA_DISABLE = 0,
     CUSTS1_DATA_ENABLE_BLE,
-		CUSTS1_DATA_ENABLE_TIMER,
 };
 
 
@@ -84,7 +83,7 @@ void user_custs1_ctrl_wr_ind_handler(ke_msg_id_t const msgid,
 void app_base_val_timer_cb_handler(void);			
 
 // Test schemes																			
-void app_base_timer_handler_test_empty(void);																			
+void app_base_timer_handler_empty(void);																			
 void app_base_timer_handler_test_basic(void);		
 																			
 // Product schemes
@@ -98,13 +97,15 @@ void app_base_timer_handler_scheme2(void);
 void app_base_timer_handler_scheme3(void);	
 // ECG tracker		
 void app_base_timer_handler_scheme4(void);
+// ECG + accel + vol, used for boards without sensor board.
+void app_base_timer_handler_scheme5(void);
+
 
 uint8_t get_ecg(uint16_t *ecg);
 uint8_t get_vol(uint16_t *vol);
 uint8_t get_accel(uint8_t *accel);
 
 void app_param_update_func(uint16_t intv_min);
-void timer0_setup(void);
 /// @} APP
 
 #endif // _USER_CUSTS1_IMPL_H_

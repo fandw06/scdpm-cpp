@@ -3,7 +3,7 @@ F (..\src\sdk\platform\arch\boot\rvds\system_ARMCM0.c)(0x5798CAC2)(-c --cpu Cort
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -57,12 +57,12 @@ I (..\src\sdk\app_modules\api\app_default_handlers.h)(0x5798CABE)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdio.h)(0x588C3A14)
 I (..\src\sdk\app_modules\api\app_callback.h)(0x5798CABE)
 I (..\src\sdk\app_modules\api\app_adv_data.h)(0x5798CABE)
-F (..\src\sdk\platform\arch\boot\rvds\boot_vectors.s)(0x5AE78E1A)(--cpu Cortex-M0 --li --pd "__EVAL SETA 1" -g --16 --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_scdpm-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM0\Include"-I"C:\Program Files\Keil\ARM\CMSIS\Include"--pd "__UVISION_VERSION SETA 524" --pd "ARMCM0 SETA 1"-o .\out\boot_vectors.o --depend .\out\boot_vectors.d)
+F (..\src\sdk\platform\arch\boot\rvds\boot_vectors.s)(0x5B06FEDF)(--cpu Cortex-M0 --li --pd "__EVAL SETA 1" -g --16 --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_scdpm-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM0\Include"-I"C:\Program Files\Keil\ARM\CMSIS\Include"--pd "__UVISION_VERSION SETA 524" --pd "ARMCM0 SETA 1"-o .\out\boot_vectors.o --depend .\out\boot_vectors.d)
 F (..\src\sdk\platform\arch\main\hardfault_handler.c)(0x58A35EBC)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB --li -g -O3 --apcs=interwork -I ..\src\sdk\platform\include -I C:\Keil\ARM\RV31\INC -I c:\Keil\ARM\CMSIS\Include -I ..\src\sdk\app_modules\api -I ..\src\sdk\app_modules\src\app_bass -I ..\src\sdk\app_modules\src\app_custs -I ..\src\sdk\app_modules\src\app_diss -I ..\src\sdk\app_modules\src\app_findme -I ..\src\sdk\app_modules\src\app_multi_bond -I ..\src\sdk\app_modules\src\app_proxr -I ..\src\sdk\app_modules\src\app_spotar -I ..\src\sdk\ble_stack\controller\em -I ..\src\sdk\ble_stack\controller\llc -I ..\src\sdk\ble_stack\controller\lld -I ..\src\sdk\ble_stack\controller\llm -I ..\src\sdk\ble_stack\hcic -I ..\src\sdk\ble_stack\hcih -I ..\src\sdk\ble_stack\host\att -I ..\src\sdk\ble_stack\host\att\attc -I ..\src\sdk\ble_stack\host\att\attm -I ..\src\sdk\ble_stack\host\att\atts -I ..\src\sdk\ble_stack\host\gap -I ..\src\sdk\ble_stack\host\gap\gapc -I ..\src\sdk\ble_stack\host\gap\gapm -I ..\src\sdk\ble_stack\host\gatt -I ..\src\sdk\ble_stack\host\gatt\gattc -I ..\src\sdk\ble_stack\host\gatt\gattm -I ..\src\sdk\ble_stack\host\l2c\l2cc -I ..\src\sdk\ble_stack\host\l2c\l2cm -I ..\src\sdk\ble_stack\host\smp\smpc -I ..\src\sdk\ble_stack\host\smp\smpm -I ..\src\sdk\ble_stack\host\smp -I ..\src\sdk\ble_stack\profiles\accel -I ..\src\sdk\ble_stack\profiles\adc_notify -I ..\src\sdk\ble_stack\profiles\anc\ancc -I ..\src\sdk\ble_stack\profiles\anc -I ..\src\sdk\ble_stack\profiles\anp\anpc -I ..\src\sdk\ble_stack\profiles\anp\anps -I ..\src\sdk\ble_stack\profiles\anp -I ..\src\sdk\ble_stack\profiles\bas\basc -I ..\src\sdk\ble_stack\profiles\bas\bass -I ..\src\sdk\ble_stack\profiles\blp\blpc -I ..\src\sdk\ble_stack\profiles\blp\blps -I ..\src\sdk\ble_stack\profiles\blp -I ..\src\sdk\ble_stack\profiles\cpp\cppc -I ..\src\sdk\ble_stack\profiles\cpp\cpps -I ..\src\sdk\ble_stack\profiles\cpp -I ..\src\sdk\ble_stack\profiles\cscp\cscpc -I ..\src\sdk\ble_stack\profiles\cscp\cscps -I ..\src\sdk\ble_stack\profiles\cscp -I ..\src\sdk\ble_stack\profiles\custom -I ..\src\sdk\ble_stack\profiles\custom\custs -I ..\src\sdk\ble_stack\profiles\device_config -I ..\src\sdk\ble_stack\profiles\dis\disc -I ..\src\sdk\ble_stack\profiles\dis\diss -I ..\src\sdk\ble_stack\profiles\find\findl -I ..\src\sdk\ble_stack\profiles\find\findt -I ..\src\sdk\ble_stack\profiles\glp\glpc -I ..\src\sdk\ble_stack\profiles\glp\glps -I ..\src\sdk\ble_stack\profiles\glp -I ..\src\sdk\ble_stack\profiles\hogp\hogpbh -I ..\src\sdk\ble_stack\profiles\hogp\hogpd -I ..\src\sdk\ble_stack\profiles\hogp\hogprh -I ..\src\sdk\ble_stack\profiles\hogp -I ..\src\sdk\ble_stack\profiles\hrp\hrpc -I ..\src\sdk\ble_stack\profiles\hrp\hrps -I ..\src\sdk\ble_stack\profiles\hrp -I ..\src\sdk\ble_stack\profiles\htp\htpc -I ..\src\sdk\ble_stack\profiles\htp\htpt -I ..\src\sdk\ble_stack\profiles\htp -I ..\src\sdk\ble_stack\profiles\ieu -I ..\src\sdk\ble_stack\profiles\lan\lanc -I ..\src\sdk\ble_stack\profiles\lan\lans -I ..\src\sdk\ble_stack\profiles\lan -I ..\src\sdk\ble_stack\profiles\mpu -I ..\src\sdk\ble_stack\profiles\pasp\paspc -I ..\src\sdk\ble_stack\profiles\pasp\pasps -I ..\src\sdk\ble_stack\profiles\pasp -I ..\src\sdk\ble_stack\profiles -I ..\src\sdk\ble_stack\profiles\prox\proxm -I ..\src\sdk\ble_stack\profiles\prox\proxr -I ..\src\sdk\ble_stack\profiles\rscp\rscpc -I ..\src\sdk\ble_stack\profiles\rscp\rscps -I ..\src\sdk\ble_stack\profiles\rscp -I ..\src\sdk\ble_stack\profiles\sample128 -I ..\src\sdk\ble_stack\profiles\scpp\scppc -I ..\src\sdk\ble_stack\profiles\scpp\scpps -I ..\src\sdk\ble_stack\profiles\scpp -I ..\src\sdk\ble_stack\profiles\spota\spotar -I ..\src\sdk\ble_stack\profiles\sps\sps_client -I ..\src\sdk\ble_stack\profiles\sps\sps_server -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatad -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatah -I ..\src\sdk\ble_stack\profiles\tip\tipc -I ..\src\sdk\ble_stack\profiles\tip\tips -I ..\src\sdk\ble_stack\profiles\tip -I ..\src\sdk\ble_stack\profiles\uds\udss -I ..\src\sdk\ble_stack\profiles\uds -I ..\src\sdk\ble_stack\profiles\wpt\wptc -I ..\src\sdk\ble_stack\profiles\wpt\wpts -I ..\src\sdk\ble_stack\profiles\wpt -I ..\src\sdk\ble_stack\profiles\wss\wsss -I ..\src\sdk\ble_stack\rwble -I ..\src\sdk\ble_stack\rwble_hl -I .\..\src\sdk\common_project_files -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\arch\boot\rvds -I ..\src\sdk\platform\arch\compiler\rvds -I ..\src\sdk\platform\arch\ll\rvds -I ..\src\sdk\platform\arch\main -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\core_modules\arch_console -I ..\src\sdk\platform\core_modules\common\api -I ..\src\sdk\platform\core_modules\crypto -I ..\src\sdk\platform\core_modules\dbg\api -I ..\src\sdk\platform\core_modules\gtl\src -I ..\src\sdk\platform\core_modules\ke\api -I ..\src\sdk\platform\core_modules\ke\src -I ..\src\sdk\platform\core_modules\nvds\api -I ..\src\sdk\platform\core_modules\rf\api -I ..\src\sdk\platform\core_modules\rwip\api -I ..\src\sdk\platform\core_modules\wlan_coex -I ..\src\sdk\platform\driver\accel -I ..\src\sdk\platform\driver\adc -I ..\src\sdk\platform\driver\battery -I ..\src\sdk\platform\driver\bme280 -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\emi -I ..\src\sdk\platform\driver\gpio -I ..\src\sdk\platform\driver\i2c_BMI055 -I ..\src\sdk\platform\driver\i2c_core -I ..\src\sdk\platform\driver\i2c_eeprom -I ..\src\sdk\platform\driver\intc -I ..\src\sdk\platform\driver\inv -I ..\src\sdk\platform\driver\led -I ..\src\sdk\platform\driver\mc3410 -I ..\src\sdk\platform\driver\pwm -I ..\src\sdk\platform\driver\rc5 -I ..\src\sdk\platform\driver\reg -I ..\src\sdk\platform\driver\sensor -I ..\src\sdk\platform\driver\spi -I ..\src\sdk\platform\driver\spi_439 -I ..\src\sdk\platform\driver\spi_flash -I ..\src\sdk\platform\driver\spi_hci -I ..\src\sdk\platform\driver\syscntl -I ..\src\sdk\platform\driver\systick -I ..\src\sdk\platform\driver\trng -I ..\src\sdk\platform\driver\uart -I ..\src\sdk\platform\driver\wkupct_quadec -I .\..\src\config -I .\..\src -I ..\src\sdk\platform\core_modules\gtl\api -I ..\src\custom_profile -I ..\src\platform -I ..\src\user_driver\spi_adxl -I ..\src\user_driver\i2c --c99 --thumb -c --preinclude da1458x_config_basic.h --preinclude da1458x_config_advanced.h --preinclude user_config.h --bss_threshold=0 --feedback=".\unused.txt"-I.\RTE\_scdpm-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM0\Include"-I"C:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="524" -DARMCM0-o .\out\hardfault_handler.o --omf_browse .\out\hardfault_handler.crf --depend .\out\hardfault_handler.d)
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -122,7 +122,7 @@ F (..\src\sdk\platform\arch\main\nmi_handler.c)(0x5798CAC2)(-c --cpu Cortex-M0 -
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -180,7 +180,7 @@ F (..\src\sdk\platform\core_modules\arch_console\arch_console.c)(0x5798CAC2)(-c 
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -242,7 +242,7 @@ F (..\src\sdk\platform\core_modules\nvds\src\nvds.c)(0x5798CAC2)(-c --cpu Cortex
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -302,7 +302,7 @@ F (..\src\sdk\platform\arch\main\arch_main.c)(0x58A649D2)(-c --cpu Cortex-M0 -D_
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -404,14 +404,14 @@ I (..\src\sdk\app_modules\api\app_entry_point.h)(0x5798CABE)
 I (..\src\platform\user_main.h)(0x5A78B7B1)
 I (..\src\sdk\app_modules\api\app_task.h)(0x5798CABE)
 I (..\src\sdk\ble_stack\host\smp\smpc\smpc_task.h)(0x5798CABF)
-I (..\src\custom_profile\user_custs1_impl.h)(0x5AE77CC6)
+I (..\src\custom_profile\user_custs1_impl.h)(0x5B07715A)
 I (..\src\sdk\ble_stack\profiles\custom\custs\custs1_task.h)(0x5798CAC0)
 I (..\src\sdk\app_modules\api\app_prf_types.h)(0x5798CABE)
 F (..\src\sdk\platform\arch\main\jump_table.c)(0x5798CAC2)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB --li -g -O3 --apcs=interwork -I ..\src\sdk\platform\include -I C:\Keil\ARM\RV31\INC -I c:\Keil\ARM\CMSIS\Include -I ..\src\sdk\app_modules\api -I ..\src\sdk\app_modules\src\app_bass -I ..\src\sdk\app_modules\src\app_custs -I ..\src\sdk\app_modules\src\app_diss -I ..\src\sdk\app_modules\src\app_findme -I ..\src\sdk\app_modules\src\app_multi_bond -I ..\src\sdk\app_modules\src\app_proxr -I ..\src\sdk\app_modules\src\app_spotar -I ..\src\sdk\ble_stack\controller\em -I ..\src\sdk\ble_stack\controller\llc -I ..\src\sdk\ble_stack\controller\lld -I ..\src\sdk\ble_stack\controller\llm -I ..\src\sdk\ble_stack\hcic -I ..\src\sdk\ble_stack\hcih -I ..\src\sdk\ble_stack\host\att -I ..\src\sdk\ble_stack\host\att\attc -I ..\src\sdk\ble_stack\host\att\attm -I ..\src\sdk\ble_stack\host\att\atts -I ..\src\sdk\ble_stack\host\gap -I ..\src\sdk\ble_stack\host\gap\gapc -I ..\src\sdk\ble_stack\host\gap\gapm -I ..\src\sdk\ble_stack\host\gatt -I ..\src\sdk\ble_stack\host\gatt\gattc -I ..\src\sdk\ble_stack\host\gatt\gattm -I ..\src\sdk\ble_stack\host\l2c\l2cc -I ..\src\sdk\ble_stack\host\l2c\l2cm -I ..\src\sdk\ble_stack\host\smp\smpc -I ..\src\sdk\ble_stack\host\smp\smpm -I ..\src\sdk\ble_stack\host\smp -I ..\src\sdk\ble_stack\profiles\accel -I ..\src\sdk\ble_stack\profiles\adc_notify -I ..\src\sdk\ble_stack\profiles\anc\ancc -I ..\src\sdk\ble_stack\profiles\anc -I ..\src\sdk\ble_stack\profiles\anp\anpc -I ..\src\sdk\ble_stack\profiles\anp\anps -I ..\src\sdk\ble_stack\profiles\anp -I ..\src\sdk\ble_stack\profiles\bas\basc -I ..\src\sdk\ble_stack\profiles\bas\bass -I ..\src\sdk\ble_stack\profiles\blp\blpc -I ..\src\sdk\ble_stack\profiles\blp\blps -I ..\src\sdk\ble_stack\profiles\blp -I ..\src\sdk\ble_stack\profiles\cpp\cppc -I ..\src\sdk\ble_stack\profiles\cpp\cpps -I ..\src\sdk\ble_stack\profiles\cpp -I ..\src\sdk\ble_stack\profiles\cscp\cscpc -I ..\src\sdk\ble_stack\profiles\cscp\cscps -I ..\src\sdk\ble_stack\profiles\cscp -I ..\src\sdk\ble_stack\profiles\custom -I ..\src\sdk\ble_stack\profiles\custom\custs -I ..\src\sdk\ble_stack\profiles\device_config -I ..\src\sdk\ble_stack\profiles\dis\disc -I ..\src\sdk\ble_stack\profiles\dis\diss -I ..\src\sdk\ble_stack\profiles\find\findl -I ..\src\sdk\ble_stack\profiles\find\findt -I ..\src\sdk\ble_stack\profiles\glp\glpc -I ..\src\sdk\ble_stack\profiles\glp\glps -I ..\src\sdk\ble_stack\profiles\glp -I ..\src\sdk\ble_stack\profiles\hogp\hogpbh -I ..\src\sdk\ble_stack\profiles\hogp\hogpd -I ..\src\sdk\ble_stack\profiles\hogp\hogprh -I ..\src\sdk\ble_stack\profiles\hogp -I ..\src\sdk\ble_stack\profiles\hrp\hrpc -I ..\src\sdk\ble_stack\profiles\hrp\hrps -I ..\src\sdk\ble_stack\profiles\hrp -I ..\src\sdk\ble_stack\profiles\htp\htpc -I ..\src\sdk\ble_stack\profiles\htp\htpt -I ..\src\sdk\ble_stack\profiles\htp -I ..\src\sdk\ble_stack\profiles\ieu -I ..\src\sdk\ble_stack\profiles\lan\lanc -I ..\src\sdk\ble_stack\profiles\lan\lans -I ..\src\sdk\ble_stack\profiles\lan -I ..\src\sdk\ble_stack\profiles\mpu -I ..\src\sdk\ble_stack\profiles\pasp\paspc -I ..\src\sdk\ble_stack\profiles\pasp\pasps -I ..\src\sdk\ble_stack\profiles\pasp -I ..\src\sdk\ble_stack\profiles -I ..\src\sdk\ble_stack\profiles\prox\proxm -I ..\src\sdk\ble_stack\profiles\prox\proxr -I ..\src\sdk\ble_stack\profiles\rscp\rscpc -I ..\src\sdk\ble_stack\profiles\rscp\rscps -I ..\src\sdk\ble_stack\profiles\rscp -I ..\src\sdk\ble_stack\profiles\sample128 -I ..\src\sdk\ble_stack\profiles\scpp\scppc -I ..\src\sdk\ble_stack\profiles\scpp\scpps -I ..\src\sdk\ble_stack\profiles\scpp -I ..\src\sdk\ble_stack\profiles\spota\spotar -I ..\src\sdk\ble_stack\profiles\sps\sps_client -I ..\src\sdk\ble_stack\profiles\sps\sps_server -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatad -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatah -I ..\src\sdk\ble_stack\profiles\tip\tipc -I ..\src\sdk\ble_stack\profiles\tip\tips -I ..\src\sdk\ble_stack\profiles\tip -I ..\src\sdk\ble_stack\profiles\uds\udss -I ..\src\sdk\ble_stack\profiles\uds -I ..\src\sdk\ble_stack\profiles\wpt\wptc -I ..\src\sdk\ble_stack\profiles\wpt\wpts -I ..\src\sdk\ble_stack\profiles\wpt -I ..\src\sdk\ble_stack\profiles\wss\wsss -I ..\src\sdk\ble_stack\rwble -I ..\src\sdk\ble_stack\rwble_hl -I .\..\src\sdk\common_project_files -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\arch\boot\rvds -I ..\src\sdk\platform\arch\compiler\rvds -I ..\src\sdk\platform\arch\ll\rvds -I ..\src\sdk\platform\arch\main -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\core_modules\arch_console -I ..\src\sdk\platform\core_modules\common\api -I ..\src\sdk\platform\core_modules\crypto -I ..\src\sdk\platform\core_modules\dbg\api -I ..\src\sdk\platform\core_modules\gtl\src -I ..\src\sdk\platform\core_modules\ke\api -I ..\src\sdk\platform\core_modules\ke\src -I ..\src\sdk\platform\core_modules\nvds\api -I ..\src\sdk\platform\core_modules\rf\api -I ..\src\sdk\platform\core_modules\rwip\api -I ..\src\sdk\platform\core_modules\wlan_coex -I ..\src\sdk\platform\driver\accel -I ..\src\sdk\platform\driver\adc -I ..\src\sdk\platform\driver\battery -I ..\src\sdk\platform\driver\bme280 -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\emi -I ..\src\sdk\platform\driver\gpio -I ..\src\sdk\platform\driver\i2c_BMI055 -I ..\src\sdk\platform\driver\i2c_core -I ..\src\sdk\platform\driver\i2c_eeprom -I ..\src\sdk\platform\driver\intc -I ..\src\sdk\platform\driver\inv -I ..\src\sdk\platform\driver\led -I ..\src\sdk\platform\driver\mc3410 -I ..\src\sdk\platform\driver\pwm -I ..\src\sdk\platform\driver\rc5 -I ..\src\sdk\platform\driver\reg -I ..\src\sdk\platform\driver\sensor -I ..\src\sdk\platform\driver\spi -I ..\src\sdk\platform\driver\spi_439 -I ..\src\sdk\platform\driver\spi_flash -I ..\src\sdk\platform\driver\spi_hci -I ..\src\sdk\platform\driver\syscntl -I ..\src\sdk\platform\driver\systick -I ..\src\sdk\platform\driver\trng -I ..\src\sdk\platform\driver\uart -I ..\src\sdk\platform\driver\wkupct_quadec -I .\..\src\config -I .\..\src -I ..\src\sdk\platform\core_modules\gtl\api -I ..\src\custom_profile -I ..\src\platform -I ..\src\user_driver\spi_adxl -I ..\src\user_driver\i2c --c99 --thumb -c --preinclude da1458x_config_basic.h --preinclude da1458x_config_advanced.h --preinclude user_config.h --bss_threshold=0 --feedback=".\unused.txt"-I.\RTE\_scdpm-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM0\Include"-I"C:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="524" -DARMCM0-o .\out\jump_table.o --omf_browse .\out\jump_table.crf --depend .\out\jump_table.d)
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -519,7 +519,7 @@ F (..\src\sdk\platform\arch\main\arch_sleep.c)(0x5798CAC2)(-c --cpu Cortex-M0 -D
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -584,7 +584,7 @@ F (..\src\sdk\platform\arch\main\arch_system.c)(0x58A35EC4)(-c --cpu Cortex-M0 -
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -649,7 +649,7 @@ I (..\src\sdk\app_modules\api\app_easy_timer.h)(0x5798CABE)
 I (..\src\sdk\ble_stack\host\gap\gapc\gapc.h)(0x5798CABF)
 I (..\src\sdk\app_modules\api\app_easy_gap.h)(0x5798CABE)
 I (..\src\sdk\ble_stack\host\smp\smpc\smpc_task.h)(0x5798CABF)
-I (..\src\custom_profile\user_custs1_impl.h)(0x5AE77CC6)
+I (..\src\custom_profile\user_custs1_impl.h)(0x5B07715A)
 I (..\src\sdk\ble_stack\profiles\custom\custs\custs1_task.h)(0x5798CAC0)
 I (..\src\sdk\app_modules\api\app_prf_types.h)(0x5798CABE)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdlib.h)(0x588C3A14)
@@ -691,7 +691,7 @@ F (..\src\sdk\platform\arch\main\arch_patch.c)(0x5798CAC2)(-c --cpu Cortex-M0 -D
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -798,7 +798,7 @@ F (..\src\sdk\platform\driver\syscntl\syscntl.c)(0x5798CAC3)(-c --cpu Cortex-M0 
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -857,7 +857,7 @@ F (..\src\sdk\platform\driver\gpio\gpio.c)(0x5798CAC3)(-c --cpu Cortex-M0 -D__EV
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -918,7 +918,7 @@ F (..\src\sdk\platform\driver\wkupct_quadec\wkupct_quadec.c)(0x5798CAC3)(-c --cp
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -978,7 +978,7 @@ F (..\src\sdk\platform\driver\battery\battery.c)(0x5798CAC2)(-c --cpu Cortex-M0 
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1039,7 +1039,7 @@ F (..\src\sdk\platform\driver\adc\adc.c)(0x583F48FF)(-c --cpu Cortex-M0 -D__EVAL
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1098,7 +1098,7 @@ F (..\src\sdk\platform\driver\trng\trng.c)(0x5798CAC3)(-c --cpu Cortex-M0 -D__EV
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1158,7 +1158,7 @@ F (..\src\sdk\platform\driver\spi_flash\spi_flash.c)(0x5798CAC3)(-c --cpu Cortex
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1219,7 +1219,7 @@ F (..\src\sdk\platform\driver\spi\spi.c)(0x5798CAC3)(-c --cpu Cortex-M0 -D__EVAL
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1279,7 +1279,7 @@ F (..\src\sdk\platform\driver\uart\uart2.c)(0x5798CAC3)(-c --cpu Cortex-M0 -D__E
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1340,7 +1340,7 @@ F (..\src\sdk\platform\core_modules\rf\src\rf_580.c)(0x5798CAC2)(-c --cpu Cortex
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1422,7 +1422,7 @@ F (..\src\sdk\ble_stack\rwble\rwble.c)(0x5798CAC2)(-c --cpu Cortex-M0 -D__EVAL -
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1521,7 +1521,7 @@ F (..\src\sdk\platform\core_modules\rwip\src\rwip.c)(0x5798CAC2)(-c --cpu Cortex
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1635,7 +1635,7 @@ F (..\src\sdk\ble_stack\host\gap\gapm\gapm.c)(0x5798CABF)(-c --cpu Cortex-M0 -D_
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1705,7 +1705,7 @@ F (..\src\sdk\ble_stack\host\att\attm\attm_db_128.c)(0x5798CABE)(-c --cpu Cortex
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1781,7 +1781,7 @@ F (..\src\sdk\ble_stack\profiles\dis\diss\diss.c)(0x5798CAC0)(-c --cpu Cortex-M0
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1839,7 +1839,7 @@ F (..\src\sdk\ble_stack\profiles\dis\diss\diss_task.c)(0x5798CAC0)(-c --cpu Cort
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1897,7 +1897,7 @@ F (..\src\sdk\ble_stack\profiles\prf_utils.c)(0x5798CAC1)(-c --cpu Cortex-M0 -D_
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -1967,7 +1967,7 @@ F (..\src\sdk\ble_stack\profiles\custom\custs\custs1.c)(0x5798CAC0)(-c --cpu Cor
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2032,7 +2032,7 @@ F (..\src\sdk\ble_stack\profiles\custom\custs\custs1_task.c)(0x5798CAC0)(-c --cp
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2115,7 +2115,7 @@ F (..\src\sdk\ble_stack\profiles\custom\custom_common.c)(0x5798CAC0)(-c --cpu Co
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2179,7 +2179,7 @@ F (..\src\sdk\app_modules\src\app_default_hnd\app_default_handlers.c)(0x5798CABE
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2248,14 +2248,14 @@ I (..\src\sdk\app_modules\api\app_entry_point.h)(0x5798CABE)
 I (..\src\platform\user_main.h)(0x5A78B7B1)
 I (..\src\sdk\app_modules\api\app_task.h)(0x5798CABE)
 I (..\src\sdk\ble_stack\host\smp\smpc\smpc_task.h)(0x5798CABF)
-I (..\src\custom_profile\user_custs1_impl.h)(0x5AE77CC6)
+I (..\src\custom_profile\user_custs1_impl.h)(0x5B07715A)
 I (..\src\sdk\ble_stack\profiles\custom\custs\custs1_task.h)(0x5798CAC0)
 I (..\src\custom_profile\user_custs_config.h)(0x583C9BEC)
 F (..\src\sdk\app_modules\src\app_common\app.c)(0x5798CABE)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB --li -g -O3 --apcs=interwork -I ..\src\sdk\platform\include -I C:\Keil\ARM\RV31\INC -I c:\Keil\ARM\CMSIS\Include -I ..\src\sdk\app_modules\api -I ..\src\sdk\app_modules\src\app_bass -I ..\src\sdk\app_modules\src\app_custs -I ..\src\sdk\app_modules\src\app_diss -I ..\src\sdk\app_modules\src\app_findme -I ..\src\sdk\app_modules\src\app_multi_bond -I ..\src\sdk\app_modules\src\app_proxr -I ..\src\sdk\app_modules\src\app_spotar -I ..\src\sdk\ble_stack\controller\em -I ..\src\sdk\ble_stack\controller\llc -I ..\src\sdk\ble_stack\controller\lld -I ..\src\sdk\ble_stack\controller\llm -I ..\src\sdk\ble_stack\hcic -I ..\src\sdk\ble_stack\hcih -I ..\src\sdk\ble_stack\host\att -I ..\src\sdk\ble_stack\host\att\attc -I ..\src\sdk\ble_stack\host\att\attm -I ..\src\sdk\ble_stack\host\att\atts -I ..\src\sdk\ble_stack\host\gap -I ..\src\sdk\ble_stack\host\gap\gapc -I ..\src\sdk\ble_stack\host\gap\gapm -I ..\src\sdk\ble_stack\host\gatt -I ..\src\sdk\ble_stack\host\gatt\gattc -I ..\src\sdk\ble_stack\host\gatt\gattm -I ..\src\sdk\ble_stack\host\l2c\l2cc -I ..\src\sdk\ble_stack\host\l2c\l2cm -I ..\src\sdk\ble_stack\host\smp\smpc -I ..\src\sdk\ble_stack\host\smp\smpm -I ..\src\sdk\ble_stack\host\smp -I ..\src\sdk\ble_stack\profiles\accel -I ..\src\sdk\ble_stack\profiles\adc_notify -I ..\src\sdk\ble_stack\profiles\anc\ancc -I ..\src\sdk\ble_stack\profiles\anc -I ..\src\sdk\ble_stack\profiles\anp\anpc -I ..\src\sdk\ble_stack\profiles\anp\anps -I ..\src\sdk\ble_stack\profiles\anp -I ..\src\sdk\ble_stack\profiles\bas\basc -I ..\src\sdk\ble_stack\profiles\bas\bass -I ..\src\sdk\ble_stack\profiles\blp\blpc -I ..\src\sdk\ble_stack\profiles\blp\blps -I ..\src\sdk\ble_stack\profiles\blp -I ..\src\sdk\ble_stack\profiles\cpp\cppc -I ..\src\sdk\ble_stack\profiles\cpp\cpps -I ..\src\sdk\ble_stack\profiles\cpp -I ..\src\sdk\ble_stack\profiles\cscp\cscpc -I ..\src\sdk\ble_stack\profiles\cscp\cscps -I ..\src\sdk\ble_stack\profiles\cscp -I ..\src\sdk\ble_stack\profiles\custom -I ..\src\sdk\ble_stack\profiles\custom\custs -I ..\src\sdk\ble_stack\profiles\device_config -I ..\src\sdk\ble_stack\profiles\dis\disc -I ..\src\sdk\ble_stack\profiles\dis\diss -I ..\src\sdk\ble_stack\profiles\find\findl -I ..\src\sdk\ble_stack\profiles\find\findt -I ..\src\sdk\ble_stack\profiles\glp\glpc -I ..\src\sdk\ble_stack\profiles\glp\glps -I ..\src\sdk\ble_stack\profiles\glp -I ..\src\sdk\ble_stack\profiles\hogp\hogpbh -I ..\src\sdk\ble_stack\profiles\hogp\hogpd -I ..\src\sdk\ble_stack\profiles\hogp\hogprh -I ..\src\sdk\ble_stack\profiles\hogp -I ..\src\sdk\ble_stack\profiles\hrp\hrpc -I ..\src\sdk\ble_stack\profiles\hrp\hrps -I ..\src\sdk\ble_stack\profiles\hrp -I ..\src\sdk\ble_stack\profiles\htp\htpc -I ..\src\sdk\ble_stack\profiles\htp\htpt -I ..\src\sdk\ble_stack\profiles\htp -I ..\src\sdk\ble_stack\profiles\ieu -I ..\src\sdk\ble_stack\profiles\lan\lanc -I ..\src\sdk\ble_stack\profiles\lan\lans -I ..\src\sdk\ble_stack\profiles\lan -I ..\src\sdk\ble_stack\profiles\mpu -I ..\src\sdk\ble_stack\profiles\pasp\paspc -I ..\src\sdk\ble_stack\profiles\pasp\pasps -I ..\src\sdk\ble_stack\profiles\pasp -I ..\src\sdk\ble_stack\profiles -I ..\src\sdk\ble_stack\profiles\prox\proxm -I ..\src\sdk\ble_stack\profiles\prox\proxr -I ..\src\sdk\ble_stack\profiles\rscp\rscpc -I ..\src\sdk\ble_stack\profiles\rscp\rscps -I ..\src\sdk\ble_stack\profiles\rscp -I ..\src\sdk\ble_stack\profiles\sample128 -I ..\src\sdk\ble_stack\profiles\scpp\scppc -I ..\src\sdk\ble_stack\profiles\scpp\scpps -I ..\src\sdk\ble_stack\profiles\scpp -I ..\src\sdk\ble_stack\profiles\spota\spotar -I ..\src\sdk\ble_stack\profiles\sps\sps_client -I ..\src\sdk\ble_stack\profiles\sps\sps_server -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatad -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatah -I ..\src\sdk\ble_stack\profiles\tip\tipc -I ..\src\sdk\ble_stack\profiles\tip\tips -I ..\src\sdk\ble_stack\profiles\tip -I ..\src\sdk\ble_stack\profiles\uds\udss -I ..\src\sdk\ble_stack\profiles\uds -I ..\src\sdk\ble_stack\profiles\wpt\wptc -I ..\src\sdk\ble_stack\profiles\wpt\wpts -I ..\src\sdk\ble_stack\profiles\wpt -I ..\src\sdk\ble_stack\profiles\wss\wsss -I ..\src\sdk\ble_stack\rwble -I ..\src\sdk\ble_stack\rwble_hl -I .\..\src\sdk\common_project_files -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\arch\boot\rvds -I ..\src\sdk\platform\arch\compiler\rvds -I ..\src\sdk\platform\arch\ll\rvds -I ..\src\sdk\platform\arch\main -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\core_modules\arch_console -I ..\src\sdk\platform\core_modules\common\api -I ..\src\sdk\platform\core_modules\crypto -I ..\src\sdk\platform\core_modules\dbg\api -I ..\src\sdk\platform\core_modules\gtl\src -I ..\src\sdk\platform\core_modules\ke\api -I ..\src\sdk\platform\core_modules\ke\src -I ..\src\sdk\platform\core_modules\nvds\api -I ..\src\sdk\platform\core_modules\rf\api -I ..\src\sdk\platform\core_modules\rwip\api -I ..\src\sdk\platform\core_modules\wlan_coex -I ..\src\sdk\platform\driver\accel -I ..\src\sdk\platform\driver\adc -I ..\src\sdk\platform\driver\battery -I ..\src\sdk\platform\driver\bme280 -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\emi -I ..\src\sdk\platform\driver\gpio -I ..\src\sdk\platform\driver\i2c_BMI055 -I ..\src\sdk\platform\driver\i2c_core -I ..\src\sdk\platform\driver\i2c_eeprom -I ..\src\sdk\platform\driver\intc -I ..\src\sdk\platform\driver\inv -I ..\src\sdk\platform\driver\led -I ..\src\sdk\platform\driver\mc3410 -I ..\src\sdk\platform\driver\pwm -I ..\src\sdk\platform\driver\rc5 -I ..\src\sdk\platform\driver\reg -I ..\src\sdk\platform\driver\sensor -I ..\src\sdk\platform\driver\spi -I ..\src\sdk\platform\driver\spi_439 -I ..\src\sdk\platform\driver\spi_flash -I ..\src\sdk\platform\driver\spi_hci -I ..\src\sdk\platform\driver\syscntl -I ..\src\sdk\platform\driver\systick -I ..\src\sdk\platform\driver\trng -I ..\src\sdk\platform\driver\uart -I ..\src\sdk\platform\driver\wkupct_quadec -I .\..\src\config -I .\..\src -I ..\src\sdk\platform\core_modules\gtl\api -I ..\src\custom_profile -I ..\src\platform -I ..\src\user_driver\spi_adxl -I ..\src\user_driver\i2c --c99 --thumb -c --preinclude da1458x_config_basic.h --preinclude da1458x_config_advanced.h --preinclude user_config.h --bss_threshold=0 --feedback=".\unused.txt"-I.\RTE\_scdpm-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM0\Include"-I"C:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="524" -DARMCM0-o .\out\app.o --omf_browse .\out\app.crf --depend .\out\app.d)
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2334,7 +2334,7 @@ I (..\src\sdk\app_modules\api\app_prf_types.h)(0x5798CABE)
 I (..\src\sdk\app_modules\api\app_prf_perm_types.h)(0x5798CABE)
 I (.\..\src\config\user_callback_config.h)(0x589362DD)
 I (..\src\platform\user_main.h)(0x5A78B7B1)
-I (..\src\custom_profile\user_custs1_impl.h)(0x5AE77CC6)
+I (..\src\custom_profile\user_custs1_impl.h)(0x5B07715A)
 I (..\src\sdk\ble_stack\profiles\custom\custs\custs1_task.h)(0x5798CAC0)
 I (..\src\sdk\platform\core_modules\ke\api\ke_mem.h)(0x5798CAC2)
 I (..\src\sdk\ble_stack\controller\llm\llm.h)(0x5798CABE)
@@ -2346,7 +2346,7 @@ F (..\src\sdk\app_modules\src\app_common\app_task.c)(0x5798CABE)(-c --cpu Cortex
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2414,14 +2414,14 @@ I (..\src\sdk\app_modules\api\app_entry_point.h)(0x5798CABE)
 I (.\..\src\config\user_callback_config.h)(0x589362DD)
 I (..\src\platform\user_main.h)(0x5A78B7B1)
 I (..\src\sdk\ble_stack\host\smp\smpc\smpc_task.h)(0x5798CABF)
-I (..\src\custom_profile\user_custs1_impl.h)(0x5AE77CC6)
+I (..\src\custom_profile\user_custs1_impl.h)(0x5B07715A)
 I (..\src\sdk\ble_stack\profiles\custom\custs\custs1_task.h)(0x5798CAC0)
 I (..\src\sdk\app_modules\api\app_prf_types.h)(0x5798CABE)
 F (..\src\sdk\app_modules\src\app_sec\app_security.c)(0x5798CABE)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB --li -g -O3 --apcs=interwork -I ..\src\sdk\platform\include -I C:\Keil\ARM\RV31\INC -I c:\Keil\ARM\CMSIS\Include -I ..\src\sdk\app_modules\api -I ..\src\sdk\app_modules\src\app_bass -I ..\src\sdk\app_modules\src\app_custs -I ..\src\sdk\app_modules\src\app_diss -I ..\src\sdk\app_modules\src\app_findme -I ..\src\sdk\app_modules\src\app_multi_bond -I ..\src\sdk\app_modules\src\app_proxr -I ..\src\sdk\app_modules\src\app_spotar -I ..\src\sdk\ble_stack\controller\em -I ..\src\sdk\ble_stack\controller\llc -I ..\src\sdk\ble_stack\controller\lld -I ..\src\sdk\ble_stack\controller\llm -I ..\src\sdk\ble_stack\hcic -I ..\src\sdk\ble_stack\hcih -I ..\src\sdk\ble_stack\host\att -I ..\src\sdk\ble_stack\host\att\attc -I ..\src\sdk\ble_stack\host\att\attm -I ..\src\sdk\ble_stack\host\att\atts -I ..\src\sdk\ble_stack\host\gap -I ..\src\sdk\ble_stack\host\gap\gapc -I ..\src\sdk\ble_stack\host\gap\gapm -I ..\src\sdk\ble_stack\host\gatt -I ..\src\sdk\ble_stack\host\gatt\gattc -I ..\src\sdk\ble_stack\host\gatt\gattm -I ..\src\sdk\ble_stack\host\l2c\l2cc -I ..\src\sdk\ble_stack\host\l2c\l2cm -I ..\src\sdk\ble_stack\host\smp\smpc -I ..\src\sdk\ble_stack\host\smp\smpm -I ..\src\sdk\ble_stack\host\smp -I ..\src\sdk\ble_stack\profiles\accel -I ..\src\sdk\ble_stack\profiles\adc_notify -I ..\src\sdk\ble_stack\profiles\anc\ancc -I ..\src\sdk\ble_stack\profiles\anc -I ..\src\sdk\ble_stack\profiles\anp\anpc -I ..\src\sdk\ble_stack\profiles\anp\anps -I ..\src\sdk\ble_stack\profiles\anp -I ..\src\sdk\ble_stack\profiles\bas\basc -I ..\src\sdk\ble_stack\profiles\bas\bass -I ..\src\sdk\ble_stack\profiles\blp\blpc -I ..\src\sdk\ble_stack\profiles\blp\blps -I ..\src\sdk\ble_stack\profiles\blp -I ..\src\sdk\ble_stack\profiles\cpp\cppc -I ..\src\sdk\ble_stack\profiles\cpp\cpps -I ..\src\sdk\ble_stack\profiles\cpp -I ..\src\sdk\ble_stack\profiles\cscp\cscpc -I ..\src\sdk\ble_stack\profiles\cscp\cscps -I ..\src\sdk\ble_stack\profiles\cscp -I ..\src\sdk\ble_stack\profiles\custom -I ..\src\sdk\ble_stack\profiles\custom\custs -I ..\src\sdk\ble_stack\profiles\device_config -I ..\src\sdk\ble_stack\profiles\dis\disc -I ..\src\sdk\ble_stack\profiles\dis\diss -I ..\src\sdk\ble_stack\profiles\find\findl -I ..\src\sdk\ble_stack\profiles\find\findt -I ..\src\sdk\ble_stack\profiles\glp\glpc -I ..\src\sdk\ble_stack\profiles\glp\glps -I ..\src\sdk\ble_stack\profiles\glp -I ..\src\sdk\ble_stack\profiles\hogp\hogpbh -I ..\src\sdk\ble_stack\profiles\hogp\hogpd -I ..\src\sdk\ble_stack\profiles\hogp\hogprh -I ..\src\sdk\ble_stack\profiles\hogp -I ..\src\sdk\ble_stack\profiles\hrp\hrpc -I ..\src\sdk\ble_stack\profiles\hrp\hrps -I ..\src\sdk\ble_stack\profiles\hrp -I ..\src\sdk\ble_stack\profiles\htp\htpc -I ..\src\sdk\ble_stack\profiles\htp\htpt -I ..\src\sdk\ble_stack\profiles\htp -I ..\src\sdk\ble_stack\profiles\ieu -I ..\src\sdk\ble_stack\profiles\lan\lanc -I ..\src\sdk\ble_stack\profiles\lan\lans -I ..\src\sdk\ble_stack\profiles\lan -I ..\src\sdk\ble_stack\profiles\mpu -I ..\src\sdk\ble_stack\profiles\pasp\paspc -I ..\src\sdk\ble_stack\profiles\pasp\pasps -I ..\src\sdk\ble_stack\profiles\pasp -I ..\src\sdk\ble_stack\profiles -I ..\src\sdk\ble_stack\profiles\prox\proxm -I ..\src\sdk\ble_stack\profiles\prox\proxr -I ..\src\sdk\ble_stack\profiles\rscp\rscpc -I ..\src\sdk\ble_stack\profiles\rscp\rscps -I ..\src\sdk\ble_stack\profiles\rscp -I ..\src\sdk\ble_stack\profiles\sample128 -I ..\src\sdk\ble_stack\profiles\scpp\scppc -I ..\src\sdk\ble_stack\profiles\scpp\scpps -I ..\src\sdk\ble_stack\profiles\scpp -I ..\src\sdk\ble_stack\profiles\spota\spotar -I ..\src\sdk\ble_stack\profiles\sps\sps_client -I ..\src\sdk\ble_stack\profiles\sps\sps_server -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatad -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatah -I ..\src\sdk\ble_stack\profiles\tip\tipc -I ..\src\sdk\ble_stack\profiles\tip\tips -I ..\src\sdk\ble_stack\profiles\tip -I ..\src\sdk\ble_stack\profiles\uds\udss -I ..\src\sdk\ble_stack\profiles\uds -I ..\src\sdk\ble_stack\profiles\wpt\wptc -I ..\src\sdk\ble_stack\profiles\wpt\wpts -I ..\src\sdk\ble_stack\profiles\wpt -I ..\src\sdk\ble_stack\profiles\wss\wsss -I ..\src\sdk\ble_stack\rwble -I ..\src\sdk\ble_stack\rwble_hl -I .\..\src\sdk\common_project_files -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\arch\boot\rvds -I ..\src\sdk\platform\arch\compiler\rvds -I ..\src\sdk\platform\arch\ll\rvds -I ..\src\sdk\platform\arch\main -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\core_modules\arch_console -I ..\src\sdk\platform\core_modules\common\api -I ..\src\sdk\platform\core_modules\crypto -I ..\src\sdk\platform\core_modules\dbg\api -I ..\src\sdk\platform\core_modules\gtl\src -I ..\src\sdk\platform\core_modules\ke\api -I ..\src\sdk\platform\core_modules\ke\src -I ..\src\sdk\platform\core_modules\nvds\api -I ..\src\sdk\platform\core_modules\rf\api -I ..\src\sdk\platform\core_modules\rwip\api -I ..\src\sdk\platform\core_modules\wlan_coex -I ..\src\sdk\platform\driver\accel -I ..\src\sdk\platform\driver\adc -I ..\src\sdk\platform\driver\battery -I ..\src\sdk\platform\driver\bme280 -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\emi -I ..\src\sdk\platform\driver\gpio -I ..\src\sdk\platform\driver\i2c_BMI055 -I ..\src\sdk\platform\driver\i2c_core -I ..\src\sdk\platform\driver\i2c_eeprom -I ..\src\sdk\platform\driver\intc -I ..\src\sdk\platform\driver\inv -I ..\src\sdk\platform\driver\led -I ..\src\sdk\platform\driver\mc3410 -I ..\src\sdk\platform\driver\pwm -I ..\src\sdk\platform\driver\rc5 -I ..\src\sdk\platform\driver\reg -I ..\src\sdk\platform\driver\sensor -I ..\src\sdk\platform\driver\spi -I ..\src\sdk\platform\driver\spi_439 -I ..\src\sdk\platform\driver\spi_flash -I ..\src\sdk\platform\driver\spi_hci -I ..\src\sdk\platform\driver\syscntl -I ..\src\sdk\platform\driver\systick -I ..\src\sdk\platform\driver\trng -I ..\src\sdk\platform\driver\uart -I ..\src\sdk\platform\driver\wkupct_quadec -I .\..\src\config -I .\..\src -I ..\src\sdk\platform\core_modules\gtl\api -I ..\src\custom_profile -I ..\src\platform -I ..\src\user_driver\spi_adxl -I ..\src\user_driver\i2c --c99 --thumb -c --preinclude da1458x_config_basic.h --preinclude da1458x_config_advanced.h --preinclude user_config.h --bss_threshold=0 --feedback=".\unused.txt"-I.\RTE\_scdpm-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM0\Include"-I"C:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="524" -DARMCM0-o .\out\app_security.o --omf_browse .\out\app_security.crf --depend .\out\app_security.d)
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2499,7 +2499,7 @@ F (..\src\sdk\app_modules\src\app_sec\app_security_task.c)(0x5798CABE)(-c --cpu 
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2557,7 +2557,7 @@ F (..\src\sdk\app_modules\src\app_bass\app_bass.c)(0x5798CABE)(-c --cpu Cortex-M
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2615,7 +2615,7 @@ F (..\src\sdk\app_modules\src\app_bass\app_bass_task.c)(0x5798CABE)(-c --cpu Cor
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2673,7 +2673,7 @@ F (..\src\sdk\app_modules\src\app_findme\app_findme.c)(0x5798CABE)(-c --cpu Cort
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2732,7 +2732,7 @@ F (..\src\sdk\app_modules\src\app_findme\app_findme_task.c)(0x5798CABE)(-c --cpu
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2801,14 +2801,14 @@ I (..\src\sdk\app_modules\api\app_easy_timer.h)(0x5798CABE)
 I (..\src\sdk\ble_stack\host\gap\gapc\gapc.h)(0x5798CABF)
 I (..\src\sdk\app_modules\api\app_easy_gap.h)(0x5798CABE)
 I (..\src\sdk\ble_stack\host\smp\smpc\smpc_task.h)(0x5798CABF)
-I (..\src\custom_profile\user_custs1_impl.h)(0x5AE77CC6)
+I (..\src\custom_profile\user_custs1_impl.h)(0x5B07715A)
 I (..\src\sdk\ble_stack\profiles\custom\custs\custs1_task.h)(0x5798CAC0)
 I (..\src\sdk\app_modules\api\app_prf_types.h)(0x5798CABE)
 F (..\src\sdk\app_modules\src\app_proxr\app_proxr.c)(0x5798CABE)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB --li -g -O3 --apcs=interwork -I ..\src\sdk\platform\include -I C:\Keil\ARM\RV31\INC -I c:\Keil\ARM\CMSIS\Include -I ..\src\sdk\app_modules\api -I ..\src\sdk\app_modules\src\app_bass -I ..\src\sdk\app_modules\src\app_custs -I ..\src\sdk\app_modules\src\app_diss -I ..\src\sdk\app_modules\src\app_findme -I ..\src\sdk\app_modules\src\app_multi_bond -I ..\src\sdk\app_modules\src\app_proxr -I ..\src\sdk\app_modules\src\app_spotar -I ..\src\sdk\ble_stack\controller\em -I ..\src\sdk\ble_stack\controller\llc -I ..\src\sdk\ble_stack\controller\lld -I ..\src\sdk\ble_stack\controller\llm -I ..\src\sdk\ble_stack\hcic -I ..\src\sdk\ble_stack\hcih -I ..\src\sdk\ble_stack\host\att -I ..\src\sdk\ble_stack\host\att\attc -I ..\src\sdk\ble_stack\host\att\attm -I ..\src\sdk\ble_stack\host\att\atts -I ..\src\sdk\ble_stack\host\gap -I ..\src\sdk\ble_stack\host\gap\gapc -I ..\src\sdk\ble_stack\host\gap\gapm -I ..\src\sdk\ble_stack\host\gatt -I ..\src\sdk\ble_stack\host\gatt\gattc -I ..\src\sdk\ble_stack\host\gatt\gattm -I ..\src\sdk\ble_stack\host\l2c\l2cc -I ..\src\sdk\ble_stack\host\l2c\l2cm -I ..\src\sdk\ble_stack\host\smp\smpc -I ..\src\sdk\ble_stack\host\smp\smpm -I ..\src\sdk\ble_stack\host\smp -I ..\src\sdk\ble_stack\profiles\accel -I ..\src\sdk\ble_stack\profiles\adc_notify -I ..\src\sdk\ble_stack\profiles\anc\ancc -I ..\src\sdk\ble_stack\profiles\anc -I ..\src\sdk\ble_stack\profiles\anp\anpc -I ..\src\sdk\ble_stack\profiles\anp\anps -I ..\src\sdk\ble_stack\profiles\anp -I ..\src\sdk\ble_stack\profiles\bas\basc -I ..\src\sdk\ble_stack\profiles\bas\bass -I ..\src\sdk\ble_stack\profiles\blp\blpc -I ..\src\sdk\ble_stack\profiles\blp\blps -I ..\src\sdk\ble_stack\profiles\blp -I ..\src\sdk\ble_stack\profiles\cpp\cppc -I ..\src\sdk\ble_stack\profiles\cpp\cpps -I ..\src\sdk\ble_stack\profiles\cpp -I ..\src\sdk\ble_stack\profiles\cscp\cscpc -I ..\src\sdk\ble_stack\profiles\cscp\cscps -I ..\src\sdk\ble_stack\profiles\cscp -I ..\src\sdk\ble_stack\profiles\custom -I ..\src\sdk\ble_stack\profiles\custom\custs -I ..\src\sdk\ble_stack\profiles\device_config -I ..\src\sdk\ble_stack\profiles\dis\disc -I ..\src\sdk\ble_stack\profiles\dis\diss -I ..\src\sdk\ble_stack\profiles\find\findl -I ..\src\sdk\ble_stack\profiles\find\findt -I ..\src\sdk\ble_stack\profiles\glp\glpc -I ..\src\sdk\ble_stack\profiles\glp\glps -I ..\src\sdk\ble_stack\profiles\glp -I ..\src\sdk\ble_stack\profiles\hogp\hogpbh -I ..\src\sdk\ble_stack\profiles\hogp\hogpd -I ..\src\sdk\ble_stack\profiles\hogp\hogprh -I ..\src\sdk\ble_stack\profiles\hogp -I ..\src\sdk\ble_stack\profiles\hrp\hrpc -I ..\src\sdk\ble_stack\profiles\hrp\hrps -I ..\src\sdk\ble_stack\profiles\hrp -I ..\src\sdk\ble_stack\profiles\htp\htpc -I ..\src\sdk\ble_stack\profiles\htp\htpt -I ..\src\sdk\ble_stack\profiles\htp -I ..\src\sdk\ble_stack\profiles\ieu -I ..\src\sdk\ble_stack\profiles\lan\lanc -I ..\src\sdk\ble_stack\profiles\lan\lans -I ..\src\sdk\ble_stack\profiles\lan -I ..\src\sdk\ble_stack\profiles\mpu -I ..\src\sdk\ble_stack\profiles\pasp\paspc -I ..\src\sdk\ble_stack\profiles\pasp\pasps -I ..\src\sdk\ble_stack\profiles\pasp -I ..\src\sdk\ble_stack\profiles -I ..\src\sdk\ble_stack\profiles\prox\proxm -I ..\src\sdk\ble_stack\profiles\prox\proxr -I ..\src\sdk\ble_stack\profiles\rscp\rscpc -I ..\src\sdk\ble_stack\profiles\rscp\rscps -I ..\src\sdk\ble_stack\profiles\rscp -I ..\src\sdk\ble_stack\profiles\sample128 -I ..\src\sdk\ble_stack\profiles\scpp\scppc -I ..\src\sdk\ble_stack\profiles\scpp\scpps -I ..\src\sdk\ble_stack\profiles\scpp -I ..\src\sdk\ble_stack\profiles\spota\spotar -I ..\src\sdk\ble_stack\profiles\sps\sps_client -I ..\src\sdk\ble_stack\profiles\sps\sps_server -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatad -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatah -I ..\src\sdk\ble_stack\profiles\tip\tipc -I ..\src\sdk\ble_stack\profiles\tip\tips -I ..\src\sdk\ble_stack\profiles\tip -I ..\src\sdk\ble_stack\profiles\uds\udss -I ..\src\sdk\ble_stack\profiles\uds -I ..\src\sdk\ble_stack\profiles\wpt\wptc -I ..\src\sdk\ble_stack\profiles\wpt\wpts -I ..\src\sdk\ble_stack\profiles\wpt -I ..\src\sdk\ble_stack\profiles\wss\wsss -I ..\src\sdk\ble_stack\rwble -I ..\src\sdk\ble_stack\rwble_hl -I .\..\src\sdk\common_project_files -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\arch\boot\rvds -I ..\src\sdk\platform\arch\compiler\rvds -I ..\src\sdk\platform\arch\ll\rvds -I ..\src\sdk\platform\arch\main -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\core_modules\arch_console -I ..\src\sdk\platform\core_modules\common\api -I ..\src\sdk\platform\core_modules\crypto -I ..\src\sdk\platform\core_modules\dbg\api -I ..\src\sdk\platform\core_modules\gtl\src -I ..\src\sdk\platform\core_modules\ke\api -I ..\src\sdk\platform\core_modules\ke\src -I ..\src\sdk\platform\core_modules\nvds\api -I ..\src\sdk\platform\core_modules\rf\api -I ..\src\sdk\platform\core_modules\rwip\api -I ..\src\sdk\platform\core_modules\wlan_coex -I ..\src\sdk\platform\driver\accel -I ..\src\sdk\platform\driver\adc -I ..\src\sdk\platform\driver\battery -I ..\src\sdk\platform\driver\bme280 -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\emi -I ..\src\sdk\platform\driver\gpio -I ..\src\sdk\platform\driver\i2c_BMI055 -I ..\src\sdk\platform\driver\i2c_core -I ..\src\sdk\platform\driver\i2c_eeprom -I ..\src\sdk\platform\driver\intc -I ..\src\sdk\platform\driver\inv -I ..\src\sdk\platform\driver\led -I ..\src\sdk\platform\driver\mc3410 -I ..\src\sdk\platform\driver\pwm -I ..\src\sdk\platform\driver\rc5 -I ..\src\sdk\platform\driver\reg -I ..\src\sdk\platform\driver\sensor -I ..\src\sdk\platform\driver\spi -I ..\src\sdk\platform\driver\spi_439 -I ..\src\sdk\platform\driver\spi_flash -I ..\src\sdk\platform\driver\spi_hci -I ..\src\sdk\platform\driver\syscntl -I ..\src\sdk\platform\driver\systick -I ..\src\sdk\platform\driver\trng -I ..\src\sdk\platform\driver\uart -I ..\src\sdk\platform\driver\wkupct_quadec -I .\..\src\config -I .\..\src -I ..\src\sdk\platform\core_modules\gtl\api -I ..\src\custom_profile -I ..\src\platform -I ..\src\user_driver\spi_adxl -I ..\src\user_driver\i2c --c99 --thumb -c --preinclude da1458x_config_basic.h --preinclude da1458x_config_advanced.h --preinclude user_config.h --bss_threshold=0 --feedback=".\unused.txt"-I.\RTE\_scdpm-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM0\Include"-I"C:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="524" -DARMCM0-o .\out\app_proxr.o --omf_browse .\out\app_proxr.crf --depend .\out\app_proxr.d)
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2866,7 +2866,7 @@ F (..\src\sdk\app_modules\src\app_proxr\app_proxr_task.c)(0x5798CABE)(-c --cpu C
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2924,7 +2924,7 @@ F (..\src\sdk\app_modules\src\app_diss\app_diss.c)(0x5798CABE)(-c --cpu Cortex-M
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -2982,7 +2982,7 @@ F (..\src\sdk\app_modules\src\app_diss\app_diss_task.c)(0x5798CABE)(-c --cpu Cor
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3040,7 +3040,7 @@ F (..\src\sdk\app_modules\src\app_spotar\app_spotar.c)(0x5798CABE)(-c --cpu Cort
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3098,7 +3098,7 @@ F (..\src\sdk\app_modules\src\app_spotar\app_spotar_task.c)(0x5798CABE)(-c --cpu
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3156,7 +3156,7 @@ F (..\src\sdk\app_modules\src\app_entry\app_entry_point.c)(0x5798CABE)(-c --cpu 
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3231,7 +3231,7 @@ I (..\src\sdk\app_modules\api\app_security.h)(0x5798CABE)
 I (..\src\sdk\app_modules\api\app_mid.h)(0x5798CABE)
 I (.\..\src\config\user_callback_config.h)(0x589362DD)
 I (..\src\platform\user_main.h)(0x5A78B7B1)
-I (..\src\custom_profile\user_custs1_impl.h)(0x5AE77CC6)
+I (..\src\custom_profile\user_custs1_impl.h)(0x5B07715A)
 I (..\src\sdk\ble_stack\profiles\custom\custs\custs1_task.h)(0x5798CAC0)
 I (..\src\sdk\app_modules\api\app_prf_types.h)(0x5798CABE)
 I (.\..\src\config\user_modules_config.h)(0x583C9BEC)
@@ -3241,7 +3241,7 @@ F (..\src\sdk\app_modules\src\app_common\app_msg_utils.c)(0x5798CABE)(-c --cpu C
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3307,7 +3307,7 @@ F (..\src\sdk\app_modules\src\app_easy\app_easy_msg_utils.c)(0x5798CABE)(-c --cp
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3372,7 +3372,7 @@ F (..\src\sdk\app_modules\src\app_easy\app_easy_security.c)(0x5798CABE)(-c --cpu
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3450,7 +3450,7 @@ F (..\src\sdk\app_modules\src\app_easy\app_easy_timer.c)(0x5AE87C54)(-c --cpu Co
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3515,7 +3515,7 @@ F (..\src\sdk\app_modules\src\app_custs\app_customs.c)(0x5798CABE)(-c --cpu Cort
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3585,7 +3585,7 @@ F (..\src\sdk\app_modules\src\app_custs\app_customs_task.c)(0x5798CABE)(-c --cpu
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3654,7 +3654,7 @@ F (..\src\sdk\app_modules\src\app_custs\app_customs_common.c)(0x5798CABE)(-c --c
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3730,7 +3730,7 @@ F (..\src\sdk\platform\driver\pwm\pwm.c)(0x5798CAC3)(-c --cpu Cortex-M0 -D__EVAL
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3807,7 +3807,7 @@ F (..\src\sdk\platform\core_modules\arch_console\arch_console.h)(0x5798CAC2)()
 F (..\src\config\da1458x_config_advanced.h)(0x583C9BEA)()
 F (..\src\config\da1458x_config_basic.h)(0x58938C7B)()
 F (..\src\config\user_callback_config.h)(0x589362DD)()
-F (..\src\config\user_config.h)(0x5AE7E72A)()
+F (..\src\config\user_config.h)(0x5B0705E9)()
 F (..\src\config\user_modules_config.h)(0x583C9BEC)()
 F (..\src\config\user_periph_setup.h)(0x5A6B81C7)()
 F (..\src\config\user_profiles_config.h)(0x587017F2)()
@@ -3816,7 +3816,7 @@ F (..\src\custom_profile\user_custs_config.c)(0x583C9BEC)(-c --cpu Cortex-M0 -D_
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3877,7 +3877,7 @@ F (..\src\custom_profile\user_custs1_def.c)(0x58D535FA)(-c --cpu Cortex-M0 -D__E
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3936,7 +3936,7 @@ F (..\src\platform\user_periph_setup.c)(0x5A6B7DBD)(-c --cpu Cortex-M0 -D__EVAL 
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -3998,7 +3998,7 @@ F (..\src\user_driver\spi_adxl\spi_adxl.c)(0x58A32AB1)(-c --cpu Cortex-M0 -D__EV
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -4061,7 +4061,7 @@ F (..\src\user_driver\i2c\i2c_light_sensor.c)(0x5ADA41FF)(-c --cpu Cortex-M0 -D_
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -4121,7 +4121,7 @@ F (..\src\user_driver\i2c\i2c_sensor.c)(0x5A7B2334)(-c --cpu Cortex-M0 -D__EVAL 
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -4183,7 +4183,7 @@ F (..\src\user_driver\i2c\i2c_temp_sensor.c)(0x5ADA3F58)(-c --cpu Cortex-M0 -D__
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -4243,11 +4243,11 @@ I (..\src\sdk\platform\driver\gpio\gpio.h)(0x5798CAC3)
 I (.\..\src\config\user_periph_setup.h)(0x5A6B81C7)
 I (.\..\src\sdk\common_project_files\da1458x_periph_setup.h)(0x5798CAC2)
 F (..\src\user_driver\i2c\i2c_temp_sensor.h)(0x5ACE376B)()
-F (..\src\custom_profile\user_custs1_impl.c)(0x5AE87C6A)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB --li -g -O3 --apcs=interwork -I ..\src\sdk\platform\include -I C:\Keil\ARM\RV31\INC -I c:\Keil\ARM\CMSIS\Include -I ..\src\sdk\app_modules\api -I ..\src\sdk\app_modules\src\app_bass -I ..\src\sdk\app_modules\src\app_custs -I ..\src\sdk\app_modules\src\app_diss -I ..\src\sdk\app_modules\src\app_findme -I ..\src\sdk\app_modules\src\app_multi_bond -I ..\src\sdk\app_modules\src\app_proxr -I ..\src\sdk\app_modules\src\app_spotar -I ..\src\sdk\ble_stack\controller\em -I ..\src\sdk\ble_stack\controller\llc -I ..\src\sdk\ble_stack\controller\lld -I ..\src\sdk\ble_stack\controller\llm -I ..\src\sdk\ble_stack\hcic -I ..\src\sdk\ble_stack\hcih -I ..\src\sdk\ble_stack\host\att -I ..\src\sdk\ble_stack\host\att\attc -I ..\src\sdk\ble_stack\host\att\attm -I ..\src\sdk\ble_stack\host\att\atts -I ..\src\sdk\ble_stack\host\gap -I ..\src\sdk\ble_stack\host\gap\gapc -I ..\src\sdk\ble_stack\host\gap\gapm -I ..\src\sdk\ble_stack\host\gatt -I ..\src\sdk\ble_stack\host\gatt\gattc -I ..\src\sdk\ble_stack\host\gatt\gattm -I ..\src\sdk\ble_stack\host\l2c\l2cc -I ..\src\sdk\ble_stack\host\l2c\l2cm -I ..\src\sdk\ble_stack\host\smp\smpc -I ..\src\sdk\ble_stack\host\smp\smpm -I ..\src\sdk\ble_stack\host\smp -I ..\src\sdk\ble_stack\profiles\accel -I ..\src\sdk\ble_stack\profiles\adc_notify -I ..\src\sdk\ble_stack\profiles\anc\ancc -I ..\src\sdk\ble_stack\profiles\anc -I ..\src\sdk\ble_stack\profiles\anp\anpc -I ..\src\sdk\ble_stack\profiles\anp\anps -I ..\src\sdk\ble_stack\profiles\anp -I ..\src\sdk\ble_stack\profiles\bas\basc -I ..\src\sdk\ble_stack\profiles\bas\bass -I ..\src\sdk\ble_stack\profiles\blp\blpc -I ..\src\sdk\ble_stack\profiles\blp\blps -I ..\src\sdk\ble_stack\profiles\blp -I ..\src\sdk\ble_stack\profiles\cpp\cppc -I ..\src\sdk\ble_stack\profiles\cpp\cpps -I ..\src\sdk\ble_stack\profiles\cpp -I ..\src\sdk\ble_stack\profiles\cscp\cscpc -I ..\src\sdk\ble_stack\profiles\cscp\cscps -I ..\src\sdk\ble_stack\profiles\cscp -I ..\src\sdk\ble_stack\profiles\custom -I ..\src\sdk\ble_stack\profiles\custom\custs -I ..\src\sdk\ble_stack\profiles\device_config -I ..\src\sdk\ble_stack\profiles\dis\disc -I ..\src\sdk\ble_stack\profiles\dis\diss -I ..\src\sdk\ble_stack\profiles\find\findl -I ..\src\sdk\ble_stack\profiles\find\findt -I ..\src\sdk\ble_stack\profiles\glp\glpc -I ..\src\sdk\ble_stack\profiles\glp\glps -I ..\src\sdk\ble_stack\profiles\glp -I ..\src\sdk\ble_stack\profiles\hogp\hogpbh -I ..\src\sdk\ble_stack\profiles\hogp\hogpd -I ..\src\sdk\ble_stack\profiles\hogp\hogprh -I ..\src\sdk\ble_stack\profiles\hogp -I ..\src\sdk\ble_stack\profiles\hrp\hrpc -I ..\src\sdk\ble_stack\profiles\hrp\hrps -I ..\src\sdk\ble_stack\profiles\hrp -I ..\src\sdk\ble_stack\profiles\htp\htpc -I ..\src\sdk\ble_stack\profiles\htp\htpt -I ..\src\sdk\ble_stack\profiles\htp -I ..\src\sdk\ble_stack\profiles\ieu -I ..\src\sdk\ble_stack\profiles\lan\lanc -I ..\src\sdk\ble_stack\profiles\lan\lans -I ..\src\sdk\ble_stack\profiles\lan -I ..\src\sdk\ble_stack\profiles\mpu -I ..\src\sdk\ble_stack\profiles\pasp\paspc -I ..\src\sdk\ble_stack\profiles\pasp\pasps -I ..\src\sdk\ble_stack\profiles\pasp -I ..\src\sdk\ble_stack\profiles -I ..\src\sdk\ble_stack\profiles\prox\proxm -I ..\src\sdk\ble_stack\profiles\prox\proxr -I ..\src\sdk\ble_stack\profiles\rscp\rscpc -I ..\src\sdk\ble_stack\profiles\rscp\rscps -I ..\src\sdk\ble_stack\profiles\rscp -I ..\src\sdk\ble_stack\profiles\sample128 -I ..\src\sdk\ble_stack\profiles\scpp\scppc -I ..\src\sdk\ble_stack\profiles\scpp\scpps -I ..\src\sdk\ble_stack\profiles\scpp -I ..\src\sdk\ble_stack\profiles\spota\spotar -I ..\src\sdk\ble_stack\profiles\sps\sps_client -I ..\src\sdk\ble_stack\profiles\sps\sps_server -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatad -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatah -I ..\src\sdk\ble_stack\profiles\tip\tipc -I ..\src\sdk\ble_stack\profiles\tip\tips -I ..\src\sdk\ble_stack\profiles\tip -I ..\src\sdk\ble_stack\profiles\uds\udss -I ..\src\sdk\ble_stack\profiles\uds -I ..\src\sdk\ble_stack\profiles\wpt\wptc -I ..\src\sdk\ble_stack\profiles\wpt\wpts -I ..\src\sdk\ble_stack\profiles\wpt -I ..\src\sdk\ble_stack\profiles\wss\wsss -I ..\src\sdk\ble_stack\rwble -I ..\src\sdk\ble_stack\rwble_hl -I .\..\src\sdk\common_project_files -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\arch\boot\rvds -I ..\src\sdk\platform\arch\compiler\rvds -I ..\src\sdk\platform\arch\ll\rvds -I ..\src\sdk\platform\arch\main -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\core_modules\arch_console -I ..\src\sdk\platform\core_modules\common\api -I ..\src\sdk\platform\core_modules\crypto -I ..\src\sdk\platform\core_modules\dbg\api -I ..\src\sdk\platform\core_modules\gtl\src -I ..\src\sdk\platform\core_modules\ke\api -I ..\src\sdk\platform\core_modules\ke\src -I ..\src\sdk\platform\core_modules\nvds\api -I ..\src\sdk\platform\core_modules\rf\api -I ..\src\sdk\platform\core_modules\rwip\api -I ..\src\sdk\platform\core_modules\wlan_coex -I ..\src\sdk\platform\driver\accel -I ..\src\sdk\platform\driver\adc -I ..\src\sdk\platform\driver\battery -I ..\src\sdk\platform\driver\bme280 -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\emi -I ..\src\sdk\platform\driver\gpio -I ..\src\sdk\platform\driver\i2c_BMI055 -I ..\src\sdk\platform\driver\i2c_core -I ..\src\sdk\platform\driver\i2c_eeprom -I ..\src\sdk\platform\driver\intc -I ..\src\sdk\platform\driver\inv -I ..\src\sdk\platform\driver\led -I ..\src\sdk\platform\driver\mc3410 -I ..\src\sdk\platform\driver\pwm -I ..\src\sdk\platform\driver\rc5 -I ..\src\sdk\platform\driver\reg -I ..\src\sdk\platform\driver\sensor -I ..\src\sdk\platform\driver\spi -I ..\src\sdk\platform\driver\spi_439 -I ..\src\sdk\platform\driver\spi_flash -I ..\src\sdk\platform\driver\spi_hci -I ..\src\sdk\platform\driver\syscntl -I ..\src\sdk\platform\driver\systick -I ..\src\sdk\platform\driver\trng -I ..\src\sdk\platform\driver\uart -I ..\src\sdk\platform\driver\wkupct_quadec -I .\..\src\config -I .\..\src -I ..\src\sdk\platform\core_modules\gtl\api -I ..\src\custom_profile -I ..\src\platform -I ..\src\user_driver\spi_adxl -I ..\src\user_driver\i2c --c99 --thumb -c --preinclude da1458x_config_basic.h --preinclude da1458x_config_advanced.h --preinclude user_config.h --bss_threshold=0 --feedback=".\unused.txt"-I.\RTE\_scdpm-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM0\Include"-I"C:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="524" -DARMCM0-o .\out\user_custs1_impl.o --omf_browse .\out\user_custs1_impl.crf --depend .\out\user_custs1_impl.d)
+F (..\src\custom_profile\user_custs1_impl.c)(0x5B0D8A25)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB --li -g -O3 --apcs=interwork -I ..\src\sdk\platform\include -I C:\Keil\ARM\RV31\INC -I c:\Keil\ARM\CMSIS\Include -I ..\src\sdk\app_modules\api -I ..\src\sdk\app_modules\src\app_bass -I ..\src\sdk\app_modules\src\app_custs -I ..\src\sdk\app_modules\src\app_diss -I ..\src\sdk\app_modules\src\app_findme -I ..\src\sdk\app_modules\src\app_multi_bond -I ..\src\sdk\app_modules\src\app_proxr -I ..\src\sdk\app_modules\src\app_spotar -I ..\src\sdk\ble_stack\controller\em -I ..\src\sdk\ble_stack\controller\llc -I ..\src\sdk\ble_stack\controller\lld -I ..\src\sdk\ble_stack\controller\llm -I ..\src\sdk\ble_stack\hcic -I ..\src\sdk\ble_stack\hcih -I ..\src\sdk\ble_stack\host\att -I ..\src\sdk\ble_stack\host\att\attc -I ..\src\sdk\ble_stack\host\att\attm -I ..\src\sdk\ble_stack\host\att\atts -I ..\src\sdk\ble_stack\host\gap -I ..\src\sdk\ble_stack\host\gap\gapc -I ..\src\sdk\ble_stack\host\gap\gapm -I ..\src\sdk\ble_stack\host\gatt -I ..\src\sdk\ble_stack\host\gatt\gattc -I ..\src\sdk\ble_stack\host\gatt\gattm -I ..\src\sdk\ble_stack\host\l2c\l2cc -I ..\src\sdk\ble_stack\host\l2c\l2cm -I ..\src\sdk\ble_stack\host\smp\smpc -I ..\src\sdk\ble_stack\host\smp\smpm -I ..\src\sdk\ble_stack\host\smp -I ..\src\sdk\ble_stack\profiles\accel -I ..\src\sdk\ble_stack\profiles\adc_notify -I ..\src\sdk\ble_stack\profiles\anc\ancc -I ..\src\sdk\ble_stack\profiles\anc -I ..\src\sdk\ble_stack\profiles\anp\anpc -I ..\src\sdk\ble_stack\profiles\anp\anps -I ..\src\sdk\ble_stack\profiles\anp -I ..\src\sdk\ble_stack\profiles\bas\basc -I ..\src\sdk\ble_stack\profiles\bas\bass -I ..\src\sdk\ble_stack\profiles\blp\blpc -I ..\src\sdk\ble_stack\profiles\blp\blps -I ..\src\sdk\ble_stack\profiles\blp -I ..\src\sdk\ble_stack\profiles\cpp\cppc -I ..\src\sdk\ble_stack\profiles\cpp\cpps -I ..\src\sdk\ble_stack\profiles\cpp -I ..\src\sdk\ble_stack\profiles\cscp\cscpc -I ..\src\sdk\ble_stack\profiles\cscp\cscps -I ..\src\sdk\ble_stack\profiles\cscp -I ..\src\sdk\ble_stack\profiles\custom -I ..\src\sdk\ble_stack\profiles\custom\custs -I ..\src\sdk\ble_stack\profiles\device_config -I ..\src\sdk\ble_stack\profiles\dis\disc -I ..\src\sdk\ble_stack\profiles\dis\diss -I ..\src\sdk\ble_stack\profiles\find\findl -I ..\src\sdk\ble_stack\profiles\find\findt -I ..\src\sdk\ble_stack\profiles\glp\glpc -I ..\src\sdk\ble_stack\profiles\glp\glps -I ..\src\sdk\ble_stack\profiles\glp -I ..\src\sdk\ble_stack\profiles\hogp\hogpbh -I ..\src\sdk\ble_stack\profiles\hogp\hogpd -I ..\src\sdk\ble_stack\profiles\hogp\hogprh -I ..\src\sdk\ble_stack\profiles\hogp -I ..\src\sdk\ble_stack\profiles\hrp\hrpc -I ..\src\sdk\ble_stack\profiles\hrp\hrps -I ..\src\sdk\ble_stack\profiles\hrp -I ..\src\sdk\ble_stack\profiles\htp\htpc -I ..\src\sdk\ble_stack\profiles\htp\htpt -I ..\src\sdk\ble_stack\profiles\htp -I ..\src\sdk\ble_stack\profiles\ieu -I ..\src\sdk\ble_stack\profiles\lan\lanc -I ..\src\sdk\ble_stack\profiles\lan\lans -I ..\src\sdk\ble_stack\profiles\lan -I ..\src\sdk\ble_stack\profiles\mpu -I ..\src\sdk\ble_stack\profiles\pasp\paspc -I ..\src\sdk\ble_stack\profiles\pasp\pasps -I ..\src\sdk\ble_stack\profiles\pasp -I ..\src\sdk\ble_stack\profiles -I ..\src\sdk\ble_stack\profiles\prox\proxm -I ..\src\sdk\ble_stack\profiles\prox\proxr -I ..\src\sdk\ble_stack\profiles\rscp\rscpc -I ..\src\sdk\ble_stack\profiles\rscp\rscps -I ..\src\sdk\ble_stack\profiles\rscp -I ..\src\sdk\ble_stack\profiles\sample128 -I ..\src\sdk\ble_stack\profiles\scpp\scppc -I ..\src\sdk\ble_stack\profiles\scpp\scpps -I ..\src\sdk\ble_stack\profiles\scpp -I ..\src\sdk\ble_stack\profiles\spota\spotar -I ..\src\sdk\ble_stack\profiles\sps\sps_client -I ..\src\sdk\ble_stack\profiles\sps\sps_server -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatad -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatah -I ..\src\sdk\ble_stack\profiles\tip\tipc -I ..\src\sdk\ble_stack\profiles\tip\tips -I ..\src\sdk\ble_stack\profiles\tip -I ..\src\sdk\ble_stack\profiles\uds\udss -I ..\src\sdk\ble_stack\profiles\uds -I ..\src\sdk\ble_stack\profiles\wpt\wptc -I ..\src\sdk\ble_stack\profiles\wpt\wpts -I ..\src\sdk\ble_stack\profiles\wpt -I ..\src\sdk\ble_stack\profiles\wss\wsss -I ..\src\sdk\ble_stack\rwble -I ..\src\sdk\ble_stack\rwble_hl -I .\..\src\sdk\common_project_files -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\arch\boot\rvds -I ..\src\sdk\platform\arch\compiler\rvds -I ..\src\sdk\platform\arch\ll\rvds -I ..\src\sdk\platform\arch\main -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\core_modules\arch_console -I ..\src\sdk\platform\core_modules\common\api -I ..\src\sdk\platform\core_modules\crypto -I ..\src\sdk\platform\core_modules\dbg\api -I ..\src\sdk\platform\core_modules\gtl\src -I ..\src\sdk\platform\core_modules\ke\api -I ..\src\sdk\platform\core_modules\ke\src -I ..\src\sdk\platform\core_modules\nvds\api -I ..\src\sdk\platform\core_modules\rf\api -I ..\src\sdk\platform\core_modules\rwip\api -I ..\src\sdk\platform\core_modules\wlan_coex -I ..\src\sdk\platform\driver\accel -I ..\src\sdk\platform\driver\adc -I ..\src\sdk\platform\driver\battery -I ..\src\sdk\platform\driver\bme280 -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\emi -I ..\src\sdk\platform\driver\gpio -I ..\src\sdk\platform\driver\i2c_BMI055 -I ..\src\sdk\platform\driver\i2c_core -I ..\src\sdk\platform\driver\i2c_eeprom -I ..\src\sdk\platform\driver\intc -I ..\src\sdk\platform\driver\inv -I ..\src\sdk\platform\driver\led -I ..\src\sdk\platform\driver\mc3410 -I ..\src\sdk\platform\driver\pwm -I ..\src\sdk\platform\driver\rc5 -I ..\src\sdk\platform\driver\reg -I ..\src\sdk\platform\driver\sensor -I ..\src\sdk\platform\driver\spi -I ..\src\sdk\platform\driver\spi_439 -I ..\src\sdk\platform\driver\spi_flash -I ..\src\sdk\platform\driver\spi_hci -I ..\src\sdk\platform\driver\syscntl -I ..\src\sdk\platform\driver\systick -I ..\src\sdk\platform\driver\trng -I ..\src\sdk\platform\driver\uart -I ..\src\sdk\platform\driver\wkupct_quadec -I .\..\src\config -I .\..\src -I ..\src\sdk\platform\core_modules\gtl\api -I ..\src\custom_profile -I ..\src\platform -I ..\src\user_driver\spi_adxl -I ..\src\user_driver\i2c --c99 --thumb -c --preinclude da1458x_config_basic.h --preinclude da1458x_config_advanced.h --preinclude user_config.h --bss_threshold=0 --feedback=".\unused.txt"-I.\RTE\_scdpm-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM0\Include"-I"C:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="524" -DARMCM0-o .\out\user_custs1_impl.o --omf_browse .\out\user_custs1_impl.crf --depend .\out\user_custs1_impl.d)
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -4322,7 +4322,7 @@ I (..\src\sdk\app_modules\api\app_easy_security.h)(0x5798CABE)
 I (..\src\sdk\app_modules\api\app_security.h)(0x5798CABE)
 I (..\src\sdk\app_modules\api\app_mid.h)(0x5798CABE)
 I (..\src\custom_profile\user_custs1_def.h)(0x5ADA3F22)
-I (..\src\custom_profile\user_custs1_impl.h)(0x5AE77CC6)
+I (..\src\custom_profile\user_custs1_impl.h)(0x5B07715A)
 I (..\src\sdk\ble_stack\profiles\custom\custs\custs1_task.h)(0x5798CAC0)
 I (..\src\platform\user_main.h)(0x5A78B7B1)
 I (.\..\src\config\user_periph_setup.h)(0x5A6B81C7)
@@ -4334,11 +4334,12 @@ I (..\src\user_driver\i2c\i2c_light_sensor.h)(0x5AD76354)
 I (..\src\user_driver\i2c\i2c_sensor.h)(0x5A748871)
 I (..\src\user_driver\i2c\i2c_temp_sensor.h)(0x5ACE376B)
 I (..\src\sdk\platform\driver\pwm\pwm.h)(0x5798CAC3)
-F (..\src\platform\user_main.c)(0x5AE7D5A3)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB --li -g -O3 --apcs=interwork -I ..\src\sdk\platform\include -I C:\Keil\ARM\RV31\INC -I c:\Keil\ARM\CMSIS\Include -I ..\src\sdk\app_modules\api -I ..\src\sdk\app_modules\src\app_bass -I ..\src\sdk\app_modules\src\app_custs -I ..\src\sdk\app_modules\src\app_diss -I ..\src\sdk\app_modules\src\app_findme -I ..\src\sdk\app_modules\src\app_multi_bond -I ..\src\sdk\app_modules\src\app_proxr -I ..\src\sdk\app_modules\src\app_spotar -I ..\src\sdk\ble_stack\controller\em -I ..\src\sdk\ble_stack\controller\llc -I ..\src\sdk\ble_stack\controller\lld -I ..\src\sdk\ble_stack\controller\llm -I ..\src\sdk\ble_stack\hcic -I ..\src\sdk\ble_stack\hcih -I ..\src\sdk\ble_stack\host\att -I ..\src\sdk\ble_stack\host\att\attc -I ..\src\sdk\ble_stack\host\att\attm -I ..\src\sdk\ble_stack\host\att\atts -I ..\src\sdk\ble_stack\host\gap -I ..\src\sdk\ble_stack\host\gap\gapc -I ..\src\sdk\ble_stack\host\gap\gapm -I ..\src\sdk\ble_stack\host\gatt -I ..\src\sdk\ble_stack\host\gatt\gattc -I ..\src\sdk\ble_stack\host\gatt\gattm -I ..\src\sdk\ble_stack\host\l2c\l2cc -I ..\src\sdk\ble_stack\host\l2c\l2cm -I ..\src\sdk\ble_stack\host\smp\smpc -I ..\src\sdk\ble_stack\host\smp\smpm -I ..\src\sdk\ble_stack\host\smp -I ..\src\sdk\ble_stack\profiles\accel -I ..\src\sdk\ble_stack\profiles\adc_notify -I ..\src\sdk\ble_stack\profiles\anc\ancc -I ..\src\sdk\ble_stack\profiles\anc -I ..\src\sdk\ble_stack\profiles\anp\anpc -I ..\src\sdk\ble_stack\profiles\anp\anps -I ..\src\sdk\ble_stack\profiles\anp -I ..\src\sdk\ble_stack\profiles\bas\basc -I ..\src\sdk\ble_stack\profiles\bas\bass -I ..\src\sdk\ble_stack\profiles\blp\blpc -I ..\src\sdk\ble_stack\profiles\blp\blps -I ..\src\sdk\ble_stack\profiles\blp -I ..\src\sdk\ble_stack\profiles\cpp\cppc -I ..\src\sdk\ble_stack\profiles\cpp\cpps -I ..\src\sdk\ble_stack\profiles\cpp -I ..\src\sdk\ble_stack\profiles\cscp\cscpc -I ..\src\sdk\ble_stack\profiles\cscp\cscps -I ..\src\sdk\ble_stack\profiles\cscp -I ..\src\sdk\ble_stack\profiles\custom -I ..\src\sdk\ble_stack\profiles\custom\custs -I ..\src\sdk\ble_stack\profiles\device_config -I ..\src\sdk\ble_stack\profiles\dis\disc -I ..\src\sdk\ble_stack\profiles\dis\diss -I ..\src\sdk\ble_stack\profiles\find\findl -I ..\src\sdk\ble_stack\profiles\find\findt -I ..\src\sdk\ble_stack\profiles\glp\glpc -I ..\src\sdk\ble_stack\profiles\glp\glps -I ..\src\sdk\ble_stack\profiles\glp -I ..\src\sdk\ble_stack\profiles\hogp\hogpbh -I ..\src\sdk\ble_stack\profiles\hogp\hogpd -I ..\src\sdk\ble_stack\profiles\hogp\hogprh -I ..\src\sdk\ble_stack\profiles\hogp -I ..\src\sdk\ble_stack\profiles\hrp\hrpc -I ..\src\sdk\ble_stack\profiles\hrp\hrps -I ..\src\sdk\ble_stack\profiles\hrp -I ..\src\sdk\ble_stack\profiles\htp\htpc -I ..\src\sdk\ble_stack\profiles\htp\htpt -I ..\src\sdk\ble_stack\profiles\htp -I ..\src\sdk\ble_stack\profiles\ieu -I ..\src\sdk\ble_stack\profiles\lan\lanc -I ..\src\sdk\ble_stack\profiles\lan\lans -I ..\src\sdk\ble_stack\profiles\lan -I ..\src\sdk\ble_stack\profiles\mpu -I ..\src\sdk\ble_stack\profiles\pasp\paspc -I ..\src\sdk\ble_stack\profiles\pasp\pasps -I ..\src\sdk\ble_stack\profiles\pasp -I ..\src\sdk\ble_stack\profiles -I ..\src\sdk\ble_stack\profiles\prox\proxm -I ..\src\sdk\ble_stack\profiles\prox\proxr -I ..\src\sdk\ble_stack\profiles\rscp\rscpc -I ..\src\sdk\ble_stack\profiles\rscp\rscps -I ..\src\sdk\ble_stack\profiles\rscp -I ..\src\sdk\ble_stack\profiles\sample128 -I ..\src\sdk\ble_stack\profiles\scpp\scppc -I ..\src\sdk\ble_stack\profiles\scpp\scpps -I ..\src\sdk\ble_stack\profiles\scpp -I ..\src\sdk\ble_stack\profiles\spota\spotar -I ..\src\sdk\ble_stack\profiles\sps\sps_client -I ..\src\sdk\ble_stack\profiles\sps\sps_server -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatad -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatah -I ..\src\sdk\ble_stack\profiles\tip\tipc -I ..\src\sdk\ble_stack\profiles\tip\tips -I ..\src\sdk\ble_stack\profiles\tip -I ..\src\sdk\ble_stack\profiles\uds\udss -I ..\src\sdk\ble_stack\profiles\uds -I ..\src\sdk\ble_stack\profiles\wpt\wptc -I ..\src\sdk\ble_stack\profiles\wpt\wpts -I ..\src\sdk\ble_stack\profiles\wpt -I ..\src\sdk\ble_stack\profiles\wss\wsss -I ..\src\sdk\ble_stack\rwble -I ..\src\sdk\ble_stack\rwble_hl -I .\..\src\sdk\common_project_files -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\arch\boot\rvds -I ..\src\sdk\platform\arch\compiler\rvds -I ..\src\sdk\platform\arch\ll\rvds -I ..\src\sdk\platform\arch\main -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\core_modules\arch_console -I ..\src\sdk\platform\core_modules\common\api -I ..\src\sdk\platform\core_modules\crypto -I ..\src\sdk\platform\core_modules\dbg\api -I ..\src\sdk\platform\core_modules\gtl\src -I ..\src\sdk\platform\core_modules\ke\api -I ..\src\sdk\platform\core_modules\ke\src -I ..\src\sdk\platform\core_modules\nvds\api -I ..\src\sdk\platform\core_modules\rf\api -I ..\src\sdk\platform\core_modules\rwip\api -I ..\src\sdk\platform\core_modules\wlan_coex -I ..\src\sdk\platform\driver\accel -I ..\src\sdk\platform\driver\adc -I ..\src\sdk\platform\driver\battery -I ..\src\sdk\platform\driver\bme280 -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\emi -I ..\src\sdk\platform\driver\gpio -I ..\src\sdk\platform\driver\i2c_BMI055 -I ..\src\sdk\platform\driver\i2c_core -I ..\src\sdk\platform\driver\i2c_eeprom -I ..\src\sdk\platform\driver\intc -I ..\src\sdk\platform\driver\inv -I ..\src\sdk\platform\driver\led -I ..\src\sdk\platform\driver\mc3410 -I ..\src\sdk\platform\driver\pwm -I ..\src\sdk\platform\driver\rc5 -I ..\src\sdk\platform\driver\reg -I ..\src\sdk\platform\driver\sensor -I ..\src\sdk\platform\driver\spi -I ..\src\sdk\platform\driver\spi_439 -I ..\src\sdk\platform\driver\spi_flash -I ..\src\sdk\platform\driver\spi_hci -I ..\src\sdk\platform\driver\syscntl -I ..\src\sdk\platform\driver\systick -I ..\src\sdk\platform\driver\trng -I ..\src\sdk\platform\driver\uart -I ..\src\sdk\platform\driver\wkupct_quadec -I .\..\src\config -I .\..\src -I ..\src\sdk\platform\core_modules\gtl\api -I ..\src\custom_profile -I ..\src\platform -I ..\src\user_driver\spi_adxl -I ..\src\user_driver\i2c --c99 --thumb -c --preinclude da1458x_config_basic.h --preinclude da1458x_config_advanced.h --preinclude user_config.h --bss_threshold=0 --feedback=".\unused.txt"-I.\RTE\_scdpm-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM0\Include"-I"C:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="524" -DARMCM0-o .\out\user_main.o --omf_browse .\out\user_main.crf --depend .\out\user_main.d)
+I (..\src\sdk\platform\driver\uart\uart.h)(0x5798CAC3)
+F (..\src\platform\user_main.c)(0x5B0702B3)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB --li -g -O3 --apcs=interwork -I ..\src\sdk\platform\include -I C:\Keil\ARM\RV31\INC -I c:\Keil\ARM\CMSIS\Include -I ..\src\sdk\app_modules\api -I ..\src\sdk\app_modules\src\app_bass -I ..\src\sdk\app_modules\src\app_custs -I ..\src\sdk\app_modules\src\app_diss -I ..\src\sdk\app_modules\src\app_findme -I ..\src\sdk\app_modules\src\app_multi_bond -I ..\src\sdk\app_modules\src\app_proxr -I ..\src\sdk\app_modules\src\app_spotar -I ..\src\sdk\ble_stack\controller\em -I ..\src\sdk\ble_stack\controller\llc -I ..\src\sdk\ble_stack\controller\lld -I ..\src\sdk\ble_stack\controller\llm -I ..\src\sdk\ble_stack\hcic -I ..\src\sdk\ble_stack\hcih -I ..\src\sdk\ble_stack\host\att -I ..\src\sdk\ble_stack\host\att\attc -I ..\src\sdk\ble_stack\host\att\attm -I ..\src\sdk\ble_stack\host\att\atts -I ..\src\sdk\ble_stack\host\gap -I ..\src\sdk\ble_stack\host\gap\gapc -I ..\src\sdk\ble_stack\host\gap\gapm -I ..\src\sdk\ble_stack\host\gatt -I ..\src\sdk\ble_stack\host\gatt\gattc -I ..\src\sdk\ble_stack\host\gatt\gattm -I ..\src\sdk\ble_stack\host\l2c\l2cc -I ..\src\sdk\ble_stack\host\l2c\l2cm -I ..\src\sdk\ble_stack\host\smp\smpc -I ..\src\sdk\ble_stack\host\smp\smpm -I ..\src\sdk\ble_stack\host\smp -I ..\src\sdk\ble_stack\profiles\accel -I ..\src\sdk\ble_stack\profiles\adc_notify -I ..\src\sdk\ble_stack\profiles\anc\ancc -I ..\src\sdk\ble_stack\profiles\anc -I ..\src\sdk\ble_stack\profiles\anp\anpc -I ..\src\sdk\ble_stack\profiles\anp\anps -I ..\src\sdk\ble_stack\profiles\anp -I ..\src\sdk\ble_stack\profiles\bas\basc -I ..\src\sdk\ble_stack\profiles\bas\bass -I ..\src\sdk\ble_stack\profiles\blp\blpc -I ..\src\sdk\ble_stack\profiles\blp\blps -I ..\src\sdk\ble_stack\profiles\blp -I ..\src\sdk\ble_stack\profiles\cpp\cppc -I ..\src\sdk\ble_stack\profiles\cpp\cpps -I ..\src\sdk\ble_stack\profiles\cpp -I ..\src\sdk\ble_stack\profiles\cscp\cscpc -I ..\src\sdk\ble_stack\profiles\cscp\cscps -I ..\src\sdk\ble_stack\profiles\cscp -I ..\src\sdk\ble_stack\profiles\custom -I ..\src\sdk\ble_stack\profiles\custom\custs -I ..\src\sdk\ble_stack\profiles\device_config -I ..\src\sdk\ble_stack\profiles\dis\disc -I ..\src\sdk\ble_stack\profiles\dis\diss -I ..\src\sdk\ble_stack\profiles\find\findl -I ..\src\sdk\ble_stack\profiles\find\findt -I ..\src\sdk\ble_stack\profiles\glp\glpc -I ..\src\sdk\ble_stack\profiles\glp\glps -I ..\src\sdk\ble_stack\profiles\glp -I ..\src\sdk\ble_stack\profiles\hogp\hogpbh -I ..\src\sdk\ble_stack\profiles\hogp\hogpd -I ..\src\sdk\ble_stack\profiles\hogp\hogprh -I ..\src\sdk\ble_stack\profiles\hogp -I ..\src\sdk\ble_stack\profiles\hrp\hrpc -I ..\src\sdk\ble_stack\profiles\hrp\hrps -I ..\src\sdk\ble_stack\profiles\hrp -I ..\src\sdk\ble_stack\profiles\htp\htpc -I ..\src\sdk\ble_stack\profiles\htp\htpt -I ..\src\sdk\ble_stack\profiles\htp -I ..\src\sdk\ble_stack\profiles\ieu -I ..\src\sdk\ble_stack\profiles\lan\lanc -I ..\src\sdk\ble_stack\profiles\lan\lans -I ..\src\sdk\ble_stack\profiles\lan -I ..\src\sdk\ble_stack\profiles\mpu -I ..\src\sdk\ble_stack\profiles\pasp\paspc -I ..\src\sdk\ble_stack\profiles\pasp\pasps -I ..\src\sdk\ble_stack\profiles\pasp -I ..\src\sdk\ble_stack\profiles -I ..\src\sdk\ble_stack\profiles\prox\proxm -I ..\src\sdk\ble_stack\profiles\prox\proxr -I ..\src\sdk\ble_stack\profiles\rscp\rscpc -I ..\src\sdk\ble_stack\profiles\rscp\rscps -I ..\src\sdk\ble_stack\profiles\rscp -I ..\src\sdk\ble_stack\profiles\sample128 -I ..\src\sdk\ble_stack\profiles\scpp\scppc -I ..\src\sdk\ble_stack\profiles\scpp\scpps -I ..\src\sdk\ble_stack\profiles\scpp -I ..\src\sdk\ble_stack\profiles\spota\spotar -I ..\src\sdk\ble_stack\profiles\sps\sps_client -I ..\src\sdk\ble_stack\profiles\sps\sps_server -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatad -I ..\src\sdk\ble_stack\profiles\streamdata\streamdatah -I ..\src\sdk\ble_stack\profiles\tip\tipc -I ..\src\sdk\ble_stack\profiles\tip\tips -I ..\src\sdk\ble_stack\profiles\tip -I ..\src\sdk\ble_stack\profiles\uds\udss -I ..\src\sdk\ble_stack\profiles\uds -I ..\src\sdk\ble_stack\profiles\wpt\wptc -I ..\src\sdk\ble_stack\profiles\wpt\wpts -I ..\src\sdk\ble_stack\profiles\wpt -I ..\src\sdk\ble_stack\profiles\wss\wsss -I ..\src\sdk\ble_stack\rwble -I ..\src\sdk\ble_stack\rwble_hl -I .\..\src\sdk\common_project_files -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\arch\boot\rvds -I ..\src\sdk\platform\arch\compiler\rvds -I ..\src\sdk\platform\arch\ll\rvds -I ..\src\sdk\platform\arch\main -I ..\src\sdk\platform\arch -I ..\src\sdk\platform\core_modules\arch_console -I ..\src\sdk\platform\core_modules\common\api -I ..\src\sdk\platform\core_modules\crypto -I ..\src\sdk\platform\core_modules\dbg\api -I ..\src\sdk\platform\core_modules\gtl\src -I ..\src\sdk\platform\core_modules\ke\api -I ..\src\sdk\platform\core_modules\ke\src -I ..\src\sdk\platform\core_modules\nvds\api -I ..\src\sdk\platform\core_modules\rf\api -I ..\src\sdk\platform\core_modules\rwip\api -I ..\src\sdk\platform\core_modules\wlan_coex -I ..\src\sdk\platform\driver\accel -I ..\src\sdk\platform\driver\adc -I ..\src\sdk\platform\driver\battery -I ..\src\sdk\platform\driver\bme280 -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\coex -I ..\src\sdk\platform\driver\emi -I ..\src\sdk\platform\driver\gpio -I ..\src\sdk\platform\driver\i2c_BMI055 -I ..\src\sdk\platform\driver\i2c_core -I ..\src\sdk\platform\driver\i2c_eeprom -I ..\src\sdk\platform\driver\intc -I ..\src\sdk\platform\driver\inv -I ..\src\sdk\platform\driver\led -I ..\src\sdk\platform\driver\mc3410 -I ..\src\sdk\platform\driver\pwm -I ..\src\sdk\platform\driver\rc5 -I ..\src\sdk\platform\driver\reg -I ..\src\sdk\platform\driver\sensor -I ..\src\sdk\platform\driver\spi -I ..\src\sdk\platform\driver\spi_439 -I ..\src\sdk\platform\driver\spi_flash -I ..\src\sdk\platform\driver\spi_hci -I ..\src\sdk\platform\driver\syscntl -I ..\src\sdk\platform\driver\systick -I ..\src\sdk\platform\driver\trng -I ..\src\sdk\platform\driver\uart -I ..\src\sdk\platform\driver\wkupct_quadec -I .\..\src\config -I .\..\src -I ..\src\sdk\platform\core_modules\gtl\api -I ..\src\custom_profile -I ..\src\platform -I ..\src\user_driver\spi_adxl -I ..\src\user_driver\i2c --c99 --thumb -c --preinclude da1458x_config_basic.h --preinclude da1458x_config_advanced.h --preinclude user_config.h --bss_threshold=0 --feedback=".\unused.txt"-I.\RTE\_scdpm-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.0.1\Device\ARM\ARMCM0\Include"-I"C:\Program Files\Keil\ARM\CMSIS\Include"-D__UVISION_VERSION="524" -DARMCM0-o .\out\user_main.o --omf_browse .\out\user_main.crf --depend .\out\user_main.d)
 I (.\..\src\config\da1458x_config_basic.h)(0x58938C7B)
 I (.\..\src\sdk\common_project_files\da1458x_stack_config.h)(0x5798CAC2)
 I (.\..\src\config\da1458x_config_advanced.h)(0x583C9BEA)
-I (.\..\src\config\user_config.h)(0x5AE7E72A)
+I (.\..\src\config\user_config.h)(0x5B0705E9)
 I (..\src\sdk\app_modules\api\app_user_config.h)(0x5798CABE)
 I (..\src\sdk\platform\core_modules\common\api\co_bt.h)(0x5798CAC2)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdbool.h)(0x588C3A14)
@@ -4401,7 +4402,7 @@ I (..\src\sdk\app_modules\api\app_easy_timer.h)(0x5798CABE)
 I (..\src\sdk\ble_stack\host\gap\gapc\gapc.h)(0x5798CABF)
 I (..\src\sdk\app_modules\api\app_easy_gap.h)(0x5798CABE)
 I (..\src\sdk\ble_stack\host\smp\smpc\smpc_task.h)(0x5798CABF)
-I (..\src\custom_profile\user_custs1_impl.h)(0x5AE77CC6)
+I (..\src\custom_profile\user_custs1_impl.h)(0x5B07715A)
 I (..\src\sdk\ble_stack\profiles\custom\custs\custs1_task.h)(0x5798CAC0)
 I (..\src\custom_profile\user_custs1_def.h)(0x5ADA3F22)
 I (..\src\user_driver\spi_adxl\spi_adxl.h)(0x587EDC1B)

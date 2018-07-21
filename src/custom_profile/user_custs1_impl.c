@@ -32,29 +32,25 @@
 #include "i2c_light_sensor.h"
 #include "i2c_temp_sensor.h"
 #include "pwm.h"
+#include "uart.h"
 
-#define RELOAD_100US      20                     // reload value fo 100us
-#define NO_PWM            0x0 
 //unit is 10ms
 //Sampling frequency of three sensors
 uint16_t BASE_INTV = 2;
+uint16_t OFF_INTV = 10000;
 
 // Data scheme
-uint8_t scheme = 2;
-
-uint8_t times = 100;
-
-static uint8_t order = 0;
-
+uint8_t scheme = 0;
 
 // Since there are 10bits of ECG, store the 2 LSB of 8 ECG sample into another short value ECG LSB
+// This is for scheme1
 uint16_t ecgLSB16 = 0;
 
+// This is for scheme4
 uint32_t ecgLSB32 = 0;
 
 // ADC channels
 // ECG: 00
-// Vcap: 01
 
 /*
  * GLOBAL VARIABLE DEFINITIONS
@@ -66,14 +62,6 @@ struct user_data_buffer data_buff = {
     .data = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	  .pos = 0,
 };
-
-// The frequency ratio of accel, vol, and ecg.
-// Total bytes should be no more than 20B.
-// Eg, ratio = {2, 1, 6}, then total bytes in a packet is 2*3+1*2+6*2 = 20B
-/*
-const int ratio[3]    = {2, 1, 6}; 
-const int interval[3] = {3, 6, 1};
-*/
 
 
 ke_msg_id_t timer_base;
@@ -100,17 +88,13 @@ void user_custs1_ctrl_wr_ind_handler(ke_msg_id_t const msgid,
 				if (cmd[1] == CUSTS1_DATA_ENABLE_BLE) 
 				{
 					running = 1;
-					// Change the function for different cases.
-					//timer_base = app_easy_timer(BASE_INTV, app_base_val_timer_cb_handler_test);	
-					//timer_base = app_easy_timer(BASE_INTV, app_base_timer_handler_empty);			
-					//timer_base = app_easy_timer(BASE_INTV, app_base_val_timer_cb_handler_case1);			
-					//timer_base = app_easy_timer(BASE_INTV, app_base_timer_handler_scheme3);						
-					//light_sensor_init();
+					// Change the function for different cases.				
 				}
-				else if (cmd[1] == CUSTS1_DATA_ENABLE_TIMER)
+				else if (cmd[1] == CUSTS1_DATA_DISABLE)
 				{
-					running = 1;
-					timer0_setup();
+					// Disable all app_easy_timers and hardware timers
+					running = 0;
+					app_easy_timer_cancel(timer_base);
 				}
 				break;
 			}
@@ -119,8 +103,7 @@ void user_custs1_ctrl_wr_ind_handler(ke_msg_id_t const msgid,
 			case 1:
 			{
 				// The sensor to change sampling interval.
-				uint8_t sensor = cmd[1];
-				BASE_INTV = cmd[2] * 256 + cmd[3];
+				BASE_INTV = cmd[1] * 256 + cmd[2];
 				break;
 			}
 			
@@ -139,7 +122,6 @@ void user_custs1_ctrl_wr_ind_handler(ke_msg_id_t const msgid,
 				running = 1;
 
 				app_easy_timer_cancel(timer_base);
-				
 				switch(scheme) {
 					case 0:
 						timer_base = app_easy_timer(BASE_INTV, app_base_timer_handler_scheme0);	
@@ -156,6 +138,15 @@ void user_custs1_ctrl_wr_ind_handler(ke_msg_id_t const msgid,
 					case 4:
 						timer_base = app_easy_timer(BASE_INTV, app_base_timer_handler_scheme4);	
 						break;
+					case 5:
+						timer_base = app_easy_timer(BASE_INTV, app_base_timer_handler_scheme5);	
+						break;
+					case 6:
+						timer_base = app_easy_timer(OFF_INTV, app_base_timer_handler_empty);	
+						break;
+					case 7:
+						app_easy_timer_cancel(timer_base);	
+						break;
 					default:
 						break;
 				}	
@@ -169,78 +160,6 @@ void user_custs1_ctrl_wr_ind_handler(ke_msg_id_t const msgid,
 			}
 		}
 }
-/* this is for ratio 2-1-6, 2bytes.
-void app_base_val_timer_cb_handler()
-{
-		switch (data_buff.pos) {
-			  // ECG
-				case 0:
-				case 2:
-				{
-					  uint8_t *val = get_ecg();
-						data_buff.data[data_buff.pos++] = val[0];
-				    data_buff.data[data_buff.pos++] = val[1];
-						break;
-				}
-				// ECG, Acc
-				case 4:
-				{	
-					  uint8_t *val = get_ecg();
-						data_buff.data[data_buff.pos++] = val[0];
-				    data_buff.data[data_buff.pos++] = val[1];
-					 	uint8_t *val2 = get_accel();
-						data_buff.data[data_buff.pos++] = val2[0];
-				    data_buff.data[data_buff.pos++] = val2[1];
-				    data_buff.data[data_buff.pos++] = val2[2];
-						break;
-				}
-				// ECG, accel
-				case 9:
-				case 11:
-				{
-					 	uint8_t *val = get_ecg();
-						data_buff.data[data_buff.pos++] = val[0];
-				    data_buff.data[data_buff.pos++] = val[1];
-						break;		
-				}
-				case 13:
-				{
-						uint8_t *val = get_ecg();
-						data_buff.data[data_buff.pos++] = val[0];
-				    data_buff.data[data_buff.pos++] = val[1];
-					 	uint8_t *val2 = get_accel();
-						data_buff.data[data_buff.pos++] = val2[0];
-				    data_buff.data[data_buff.pos++] = val2[1];
-				    data_buff.data[data_buff.pos++] = val2[2];
-				    uint8_t *val3 = get_vol();
-						data_buff.data[data_buff.pos++] = val3[0];
-				    data_buff.data[data_buff.pos++] = val3[1];
-				
-
-						data_buff.pos = 0;
-						struct custs1_val_ntf_req* req = KE_MSG_ALLOC_DYN(CUSTS1_VAL_NTF_REQ,
-																															TASK_CUSTS1,
-																															TASK_APP,
-																															custs1_val_ntf_req,
-																															DEF_CUST1_SENSOR_VAL_CHAR_LEN);
-						req->conhdl = app_env->conhdl;
-						req->handle = CUST1_IDX_SENSOR_VAL_VAL;
-						req->length = DEF_CUST1_SENSOR_VAL_CHAR_LEN;
-						memcpy(req->value, &data_buff.data, DEF_CUST1_SENSOR_VAL_CHAR_LEN);
-						ke_msg_send(req);
-						break
-				}
-				default:
-						break;
-		}
-
-		if (ke_state_get(TASK_APP) == APP_CONNECTED && running)
-		{
-				if (running)
-						timer_base = app_easy_timer(BASE_INTV, app_base_val_timer_cb_handler);
-		}
-}
-*/
 
 void app_base_val_timer_cb_handler()
 {
@@ -304,96 +223,6 @@ void app_base_val_timer_cb_handler()
 		if (ke_state_get(TASK_APP) == APP_CONNECTED && running)
 		{
 			timer_base = app_easy_timer(BASE_INTV, app_base_val_timer_cb_handler);
-		}
-}
-
-
-void app_base_val_timer_cb_handler_test() 
-{
-		uint8_t val[] = {0, 0};
-	  /*
-		// Test light sensor
-		light_sensor_init();
-		uint8_t* val = get_lux_bytes();
-		*/
-		// Test temperature sensor
-		//temp_sensor_init();
-		//
-		//query_device(val);
-		//query_rev(val);
-		//get_temp_bytes(FAST, HOLD, val);
-		//get_temp_bytes(NORM, NO_HOLD, val);
-		
-		// Test light sensor
-		/*
-		light_sensor_init();
-		uint8_t* val = get_lux_bytes();
-		
-		
-		data_buff.data[0] = val[0];
-		data_buff.data[1] = val[1];
-		data_buff.data[2] = 0;
-		data_buff.data[3] = 0;
-		data_buff.data[4] = 0;
-		data_buff.data[5] = 0;
-		
-		*/
-		
-		// Test temp sensor
-		/*
-		temp_sensor_init();
-		temp_sensor_config_onestop();
-		get_temp_bytes(val);
-		*/
-		
-		data_buff.data[0] = val[0];
-		data_buff.data[1] = val[1];
-		data_buff.data[2] = 0;
-		data_buff.data[3] = 0;
-		
-		uint8 vol = 0;
-//		get_vol(&vol);
-		data_buff.data[4] = vol;
-		data_buff.data[5] = 0;
-		
-		
-		/*
-		data_buff.data[0] = order;
-		data_buff.data[1] = APP_CONNECTED;
-		data_buff.data[2] = running;
-		data_buff.data[3] = ke_state_get(TASK_APP);
-		
-		uint16_t ttt = 1203/1.25;
-		data_buff.data[4] = (ttt>>8);
-		data_buff.data[5] = (ttt & 0xff);
-		*/
-		uint8_t val_acc[3] = {0, 0, 0};
-		get_accel(val_acc);
-		data_buff.data[6] = val_acc[0];
-		data_buff.data[7] = val_acc[1];
-		data_buff.data[8] = val_acc[2];
-		
-		/*
-		for (int i = 6; i< 40; i++)
-			data_buff.data[i] = i;
-		*/
-		struct custs1_val_ntf_req* req = KE_MSG_ALLOC_DYN(CUSTS1_VAL_NTF_REQ,
-																													TASK_CUSTS1,
-																													TASK_APP,
-																													custs1_val_ntf_req,
-																													DEF_CUST1_SENSOR_VAL_CHAR_LEN);
-		req->conhdl = app_env->conhdl;
-		req->handle = CUST1_IDX_SENSOR_VAL_VAL;
-		req->length = DEF_CUST1_SENSOR_VAL_CHAR_LEN;
-		memcpy(req->value, &data_buff.data, DEF_CUST1_SENSOR_VAL_CHAR_LEN);
-		ke_msg_send(req);
-
-		order++;
-		//timer_base = app_easy_timer(BASE_INTV, app_base_val_timer_cb_handler_test);
-		
-		if(((ke_state_get(TASK_APP) == APP_CONNECTED) || (ke_state_get(TASK_APP) == APP_PARAM_UPD))&& running)
-		{
-			timer_base = app_easy_timer(BASE_INTV, app_base_val_timer_cb_handler_test);
 		}
 }
 
@@ -794,6 +623,74 @@ void app_base_timer_handler_scheme4()
 
 
 
+void app_base_timer_handler_scheme5()
+{
+		switch (data_buff.pos) {
+			  // ECG
+				case 0:
+				case 1:
+				case 6:
+				case 7:
+				case 12:
+				case 13:
+				{
+					  uint16_t val = 0;
+						get_ecg(&val);
+						data_buff.data[data_buff.pos++] = ((val >> 2)&0xFF);
+						break;
+				}
+				// ECG, Acc
+				case 2:
+				case 8:
+				case 14:
+				{	
+					  uint16_t val = 0;
+						get_ecg(&val);
+						data_buff.data[data_buff.pos++] = ((val >> 2)&0xFF);
+						uint8_t val2[] = {0, 0, 0};
+						get_accel(val2);
+						data_buff.data[data_buff.pos++] = val2[0];
+				    data_buff.data[data_buff.pos++] = val2[1];
+				    data_buff.data[data_buff.pos++] = val2[2];
+						break;
+				}
+				// ECG, vol
+				case 18:
+				{
+					 	uint16_t val = 0;
+						get_ecg(&val);
+						data_buff.data[data_buff.pos++] = ((val >> 2)&0xFF);
+					
+						uint16_t val2 = 0;
+					  get_vol(&val2);
+				    data_buff.data[data_buff.pos++] = (val2 >> 2);
+					
+					  data_buff.pos = 0;
+						struct custs1_val_ntf_req* req = KE_MSG_ALLOC_DYN(CUSTS1_VAL_NTF_REQ,
+																															TASK_CUSTS1,
+																															TASK_APP,
+																															custs1_val_ntf_req,
+																															DEF_CUST1_SENSOR_VAL_CHAR_LEN);
+						req->conhdl = app_env->conhdl;
+						req->handle = CUST1_IDX_SENSOR_VAL_VAL;
+						req->length = DEF_CUST1_SENSOR_VAL_CHAR_LEN;
+						memcpy(req->value, &data_buff.data, DEF_CUST1_SENSOR_VAL_CHAR_LEN);
+						ke_msg_send(req);
+						break;		
+				}
+				default:
+						break;
+		}
+
+		// Repeate the timer_hander.
+		if(((ke_state_get(TASK_APP) == APP_CONNECTED) || (ke_state_get(TASK_APP) == APP_PARAM_UPD))&& running)
+		{
+			timer_base = app_easy_timer(BASE_INTV, app_base_timer_handler_scheme5);
+		}
+}
+
+
+
 void app_base_timer_handler_empty()
 {	
 		/*
@@ -811,7 +708,7 @@ void app_base_timer_handler_empty()
 		// Repeate the timer_hander.
 		if(((ke_state_get(TASK_APP) == APP_CONNECTED) || (ke_state_get(TASK_APP) == APP_PARAM_UPD))&& running)
 		{
-			timer_base = app_easy_timer(BASE_INTV, app_base_timer_handler_empty);
+			timer_base = app_easy_timer(OFF_INTV, app_base_timer_handler_empty);
 		}
 }
 
@@ -831,9 +728,10 @@ uint8_t get_ecg(uint16_t *ecg)
 
 uint8_t get_vol(uint16_t *vol)
 {
-		// Initialize adc, channel 01
+		// Initialize adc
 	  adc_init(GP_ADC_SE, 0, GP_ADC_ATTN3X);
-	  adc_enable_channel(ADC_CHANNEL_P01);
+	  //adc_enable_channel(ADC_CHANNEL_P01);
+	  adc_enable_channel(ADC_CHANNEL_VBAT3V);
 		int data = adc_get_sample();
 	  *vol = (data & 0x3FF);
 		return 0;
@@ -846,7 +744,6 @@ uint8_t get_accel(uint8_t *accel)
 		*accel = read_accel(ZDATA);
 		return 0;
 }
-
 
 void app_param_update_func(uint16_t intv_min)
 {
@@ -866,88 +763,6 @@ void app_param_update_func(uint16_t intv_min)
 }
 
 
-// Timer 0 test.
-
-void timer0_general_user_callback_function(void) 
-{
-
-    uint8_t val_acc[3] = {0, 0, 0};
-		get_accel(val_acc);
-		//if (data_buff.pos < 16) {
-			data_buff.data[data_buff.pos++] = times;
-			data_buff.data[data_buff.pos++] = val_acc[0];
-			data_buff.data[data_buff.pos++] = val_acc[1];
-			data_buff.data[data_buff.pos++] = val_acc[2];
-		//}
-		
-		/*
-		for (int i = 6; i< 40; i++)
-			data_buff.data[i] = i;
-		*/
-		//else {
-			data_buff.pos = 0;
-			
-			struct custs1_val_ntf_req* req = KE_MSG_ALLOC_DYN(CUSTS1_VAL_NTF_REQ,
-																														TASK_CUSTS1,
-																														TASK_APP,
-																														custs1_val_ntf_req,
-																														DEF_CUST1_SENSOR_VAL_CHAR_LEN);
-			req->conhdl = app_env->conhdl;
-			req->handle = CUST1_IDX_SENSOR_VAL_VAL;
-			req->length = DEF_CUST1_SENSOR_VAL_CHAR_LEN;
-			memcpy(req->value, &data_buff.data, DEF_CUST1_SENSOR_VAL_CHAR_LEN);
-			ke_msg_send(req);
-			
-		//}
-		
-		times--;
-		//timer0_start();
-		/*
-		if(((ke_state_get(TASK_APP) == APP_CONNECTED) || (ke_state_get(TASK_APP) == APP_PARAM_UPD))&& running)
-		{
-			timer0_setup();
-		}
-		*/
-}
-
-void timer0_setup()
-{
-    // Stop timer for enter settings
-    timer0_stop();
-		SetWord16(SET_FREEZE_REG,FRZ_WDOG); 
-		times = 100;
-	
-    // register callback function for SWTIM_IRQn irq
-    timer0_register_callback(timer0_general_user_callback_function);
-
-    // Enable TIMER0 clock
-    set_tmr_enable(CLK_PER_REG_TMR_ENABLED);
-
-    // Sets TIMER0,TIMER2 clock division factor to 8, so TIM0 Fclk is F = 16MHz/8 = 2Mhz
-    set_tmr_div(CLK_PER_REG_TMR_DIV_8);
-
-    // clear PWM settings register to not generate PWM
-    timer0_set_pwm_high_counter(NO_PWM);
-    timer0_set_pwm_low_counter(NO_PWM);
-    
-    // Set timer with 2MHz source clock divided by 10 so Fclk = 2MHz/10 = 200kHz
-    timer0_init(TIM0_CLK_32K, PWM_MODE_ONE, TIM0_CLK_DIV_BY_10);
-
-    // reload value for 100ms (T = 1/200kHz * RELOAD_100MS = 0,000005 * 20 = 100us = 0.1ms)
-    timer0_set_pwm_on_counter(RELOAD_100US); //500us
-
-    // Enable SWTIM_IRQn irq
-    timer0_enable_irq();
-    
-		
-    // Start Timer0
-    timer0_start();
-		
-		while (times);
-		
-	  //set_tmr_enable(CLK_PER_REG_TMR_DISABLED);
-		
-}
 
 
 

@@ -36,7 +36,7 @@
  ****************************************************************************************
  */
  const static int conn_min = 200;
- const static int conn_max = 280;
+ const static int conn_max = 220;
  const static int conn_timeout = 8100;
 
 /******************************************
@@ -49,7 +49,6 @@
  ******************************************
  */
 const static sleep_state_t app_default_sleep_mode = ARCH_EXT_SLEEP_ON;
-//const static sleep_state_t app_default_sleep_mode = ARCH_SLEEP_OFF;
 /*
  ****************************************************************************************
  *

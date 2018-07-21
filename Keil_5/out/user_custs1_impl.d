@@ -93,3 +93,4 @@
 .\out\user_custs1_impl.o: ..\src\user_driver\i2c\i2c_sensor.h
 .\out\user_custs1_impl.o: ..\src\user_driver\i2c\i2c_temp_sensor.h
 .\out\user_custs1_impl.o: ..\src\sdk\platform\driver\pwm\pwm.h
+.\out\user_custs1_impl.o: ..\src\sdk\platform\driver\uart\uart.h

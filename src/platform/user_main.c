@@ -38,7 +38,6 @@ extern uint8_t read_REVID(void);
 extern uint8_t read_accel(uint8_t channel_address);
 extern void adxl_init(uint8_t odr);
 extern void light_sensor_init(void);
-//extern uint16_t get_lux_bytes();
 
 
 void user_adc_init(void);
@@ -150,12 +149,6 @@ void user_app_init(void)
 		// enable near field mode.
 		rf_nfm_enable();
 	//  rf_nfm_disable();
-	
-	SetWord16(CLK_AMBA_REG, 0x00);                 // set clocks (hclk and pclk ) 16MHz
-    SetWord16(SET_FREEZE_REG,FRZ_WDOG);            // stop watch dog
-    SetBits16(SYS_CTRL_REG,PAD_LATCH_EN,1);        // open pads
-    SetBits16(SYS_CTRL_REG,DEBUGGER_ENABLE,1);     // open debugger
-    SetBits16(PMU_CTRL_REG, PERIPH_SLEEP,0);       // exit peripheral power down
 }
 
 /**
